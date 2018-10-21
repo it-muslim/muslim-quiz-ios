@@ -1,0 +1,15 @@
+language: swift
+xcode_workspace: Muslim Quiz.xcworkspace
+xcode_scheme: Muslim Quiz
+cache: cocoapods
+osx_image: xcode10
+install:
+  - bundle install
+notifications:
+  email:
+    - amin.benarieb@gmail.com
+before_script:
+  - chmod +x travis/script.sh
+script: 
+  - fastlane beta
+# after_success: travis/after_success_script.sh

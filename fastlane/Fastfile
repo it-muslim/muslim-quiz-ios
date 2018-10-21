@@ -1,0 +1,40 @@
+update_fastlane
+
+# TestFlight Docs
+# https://docs.fastlane.tools/actions/testflight/
+
+lane :beta do
+
+	setup_travis
+
+	# 1. ensure_git_status_clean
+	# 2. increment version
+
+	changelog = changelog_from_git_commits(
+		pretty: "%b",
+		merge_commit_filtering: "only_include_merges",
+		date_format: "short")
+
+	begin
+		build_app(
+			scheme: "Muslim Quiz",
+			export_method: "development",
+			include_symbols: false)
+
+		upload_to_testflight(
+			changelog: changelog,
+			username: "amin.benarieb@gmail.com",
+			app_identifier: "com.aminbenarieb.muslim-quiz",
+			skip_waiting_for_build_processing: true
+			)
+
+		# 3. commit_version_bump - commit incremeted version
+		# 4. add_git_tag - for releases
+		# 5. push_to_git_remote - 
+		# 6. slack notification
+
+	rescue => ex
+		# restore git state
+	end
+
+end
