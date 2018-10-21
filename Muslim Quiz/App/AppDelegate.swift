@@ -7,21 +7,39 @@
 //
 
 import UIKit
+import Swinject
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var appConfigurator : AppConfiguratorProtocol!
-    var deepLinkHandler : DeeplinkHandlerProtocol!
-    var notificationHandler : NotificationHandlerProtocol!
+    var appConfigurator: AppConfiguratorProtocol!
+    var deepLinkHandler: DeeplinkHandlerProtocol!
+    var notificationHandler: NotificationHandlerProtocol!
     var window: UIWindow?
-
+    
+    // DI Container
+    let container: Container = {
+        let container = Container()
+        container.register(AppConfiguratorProtocol.self) { _ in AppConfigurator() }
+        container.register(DeeplinkHandlerProtocol.self) { _ in DeeplinkHandler() }
+        container.register(NotificationHandlerProtocol.self) { _ in NotificationHandler() }
+        
+        return container
+    }()
+    
     // MARK: Lifecycle
+    
+    override init() {
+        self.appConfigurator = container.resolve(AppConfiguratorProtocol.self)
+        self.deepLinkHandler = container.resolve(DeeplinkHandlerProtocol.self)
+        self.notificationHandler = container.resolve(NotificationHandlerProtocol.self)
+    }
     
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         self.appConfigurator.initialSetupApplication(application,
-                                                     didFinishLaunchingWithOptions: launchOptions)
+                                                     didFinishLaunchingWithOptions: launchOptions,
+                                                     with: &self.window)
         self.notificationHandler.application(application,
                                              didFinishLaunchingWithOptions: launchOptions)
         return true

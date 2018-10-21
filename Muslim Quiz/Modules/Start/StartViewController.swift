@@ -8,15 +8,20 @@
 
 import UIKit
 
-protocol StartViewControllerProtocol {
-    
+protocol StartViewControllerProtocol : class {
+    var viewController : UIViewController { get }
+}
+extension StartViewControllerProtocol where Self: UIViewController {
+    var viewController : UIViewController {
+        return self
+    }
 }
 
 class StartViewController: UIViewController, StartViewControllerProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.view.backgroundColor = .red
     }
 
 

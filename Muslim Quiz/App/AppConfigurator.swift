@@ -8,11 +8,13 @@
 
 import UIKit
 import Firebase
+import Swinject
 
 protocol AppConfiguratorProtocol {
 
     func initialSetupApplication(_ application: UIApplication,
-                                  didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?)
+                                  didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?,
+                                  with window: inout UIWindow?)
 
     
     func applicationWillResignActive(_ application: UIApplication)
@@ -29,8 +31,23 @@ protocol AppConfiguratorProtocol {
 
 class AppConfigurator : AppConfiguratorProtocol {
 
+    // DI Container
+    let container : Container = {
+        let container = Container()
+        container.register(StartViewControllerProtocol.self) { r in
+            let controller = StartViewController()
+            return controller
+        }
+        return container
+    }()
+    
     func initialSetupApplication(_ application: UIApplication,
-                                  didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
+                                  didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?,
+                                  with window: inout UIWindow?) {
+        // Window
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = container.resolve(StartViewControllerProtocol.self)?.viewController
+        window?.makeKeyAndVisible()
         
         // Firebase
         FirebaseApp.configure()
@@ -42,8 +59,6 @@ class AppConfigurator : AppConfiguratorProtocol {
 //        Bugfender.enableUIEventLogging()  // 2. optional, log user interactions automatically
 //        DDLog.add(DDBugfenderLogger.shared) 3. Configure CocoaLumberJack
 //        BFLog("Hello world!") // Use wrapper for logging /
-        
-        
     }
     
     func applicationWillResignActive(_ application: UIApplication){
