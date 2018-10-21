@@ -9,13 +9,18 @@
 /* Begin PBXBuildFile section */
 		3272A2AC86CD8E22FE1F685D /* Pods_Muslim_Quiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E09166D80B813136B979E09 /* Pods_Muslim_Quiz.framework */; };
 		9D4A71C5A1488F88415EB264 /* Pods_Muslim_QuizTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A34FC7518F93AD97F58139 /* Pods_Muslim_QuizTests.framework */; };
+		FC52A00C217CBCEA00886C76 /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC52A00B217CBCEA00886C76 /* AppConfigurator.swift */; };
+		FC52A00E217CBCF700886C76 /* DeeplinkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC52A00D217CBCF700886C76 /* DeeplinkHandler.swift */; };
+		FC52A010217CBCFF00886C76 /* QuizConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC52A00F217CBCFF00886C76 /* QuizConfigurator.swift */; };
+		FC52A016217CC0EF00886C76 /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC52A015217CC0EF00886C76 /* NotificationHandler.swift */; };
+		FC52A018217CC7FA00886C76 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC52A017217CC7FA00886C76 /* GoogleService-Info.plist */; };
+		FC52A01B217CCADC00886C76 /* StartRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC52A01A217CCADC00886C76 /* StartRouter.swift */; };
+		FC52A01D217CCAE400886C76 /* StartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC52A01C217CCAE400886C76 /* StartPresenter.swift */; };
 		FC8C5528217BD79100B77B6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8C5527217BD79100B77B6E /* AppDelegate.swift */; };
-		FC8C552A217BD79100B77B6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8C5529217BD79100B77B6E /* ViewController.swift */; };
-		FC8C552D217BD79100B77B6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC8C552B217BD79100B77B6E /* Main.storyboard */; };
+		FC8C552A217BD79100B77B6E /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8C5529217BD79100B77B6E /* StartViewController.swift */; };
 		FC8C552F217BD79300B77B6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC8C552E217BD79300B77B6E /* Assets.xcassets */; };
 		FC8C5532217BD79300B77B6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC8C5530217BD79300B77B6E /* LaunchScreen.storyboard */; };
 		FC8C553D217BD79300B77B6E /* Muslim_QuizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8C553C217BD79300B77B6E /* Muslim_QuizTests.swift */; };
-		FC8C5548217BD97A00B77B6E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC8C5547217BD97A00B77B6E /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,17 +40,23 @@
 		8E09166D80B813136B979E09 /* Pods_Muslim_Quiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Muslim_Quiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FA237C6F682CCA7981504DB /* Pods-Muslim QuizTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muslim QuizTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Muslim QuizTests/Pods-Muslim QuizTests.release.xcconfig"; sourceTree = "<group>"; };
 		C3F2D16E48BFEB5FF4D1C116 /* Pods-Muslim Quiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muslim Quiz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Muslim Quiz/Pods-Muslim Quiz.debug.xcconfig"; sourceTree = "<group>"; };
+		FC529FFF217CB58700886C76 /* Muslim Quiz.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Muslim Quiz.entitlements"; sourceTree = "<group>"; };
+		FC52A00B217CBCEA00886C76 /* AppConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurator.swift; sourceTree = "<group>"; };
+		FC52A00D217CBCF700886C76 /* DeeplinkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkHandler.swift; sourceTree = "<group>"; };
+		FC52A00F217CBCFF00886C76 /* QuizConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizConfigurator.swift; sourceTree = "<group>"; };
+		FC52A015217CC0EF00886C76 /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
+		FC52A017217CC7FA00886C76 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FC52A01A217CCADC00886C76 /* StartRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartRouter.swift; sourceTree = "<group>"; };
+		FC52A01C217CCAE400886C76 /* StartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPresenter.swift; sourceTree = "<group>"; };
 		FC8C5524217BD79100B77B6E /* Muslim Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Muslim Quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC8C5527217BD79100B77B6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FC8C5529217BD79100B77B6E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FC8C552C217BD79100B77B6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FC8C5529217BD79100B77B6E /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		FC8C552E217BD79300B77B6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC8C5531217BD79300B77B6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FC8C5533217BD79300B77B6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC8C5533217BD79300B77B6E /* Muslim-Quiz.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Muslim-Quiz.plist"; sourceTree = "<group>"; };
 		FC8C5538217BD79300B77B6E /* Muslim QuizTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Muslim QuizTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC8C553C217BD79300B77B6E /* Muslim_QuizTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Muslim_QuizTests.swift; sourceTree = "<group>"; };
 		FC8C553E217BD79300B77B6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FC8C5547217BD97A00B77B6E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +99,48 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FC52A008217CBC0600886C76 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FC529FFF217CB58700886C76 /* Muslim Quiz.entitlements */,
+				FC8C552E217BD79300B77B6E /* Assets.xcassets */,
+				FC8C5530217BD79300B77B6E /* LaunchScreen.storyboard */,
+				FC52A017217CC7FA00886C76 /* GoogleService-Info.plist */,
+				FC8C5533217BD79300B77B6E /* Muslim-Quiz.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FC52A009217CBCBF00886C76 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FC8C5527217BD79100B77B6E /* AppDelegate.swift */,
+				FC52A00B217CBCEA00886C76 /* AppConfigurator.swift */,
+				FC52A00F217CBCFF00886C76 /* QuizConfigurator.swift */,
+				FC52A00D217CBCF700886C76 /* DeeplinkHandler.swift */,
+				FC52A015217CC0EF00886C76 /* NotificationHandler.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FC52A00A217CBCC400886C76 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				FC52A019217CCACA00886C76 /* Start */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		FC52A019217CCACA00886C76 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				FC8C5529217BD79100B77B6E /* StartViewController.swift */,
+				FC52A01A217CCADC00886C76 /* StartRouter.swift */,
+				FC52A01C217CCAE400886C76 /* StartPresenter.swift */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
 		FC8C551B217BD79000B77B6E = {
 			isa = PBXGroup;
 			children = (
@@ -111,13 +164,9 @@
 		FC8C5526217BD79100B77B6E /* Muslim Quiz */ = {
 			isa = PBXGroup;
 			children = (
-				FC8C5527217BD79100B77B6E /* AppDelegate.swift */,
-				FC8C5529217BD79100B77B6E /* ViewController.swift */,
-				FC8C552B217BD79100B77B6E /* Main.storyboard */,
-				FC8C552E217BD79300B77B6E /* Assets.xcassets */,
-				FC8C5530217BD79300B77B6E /* LaunchScreen.storyboard */,
-				FC8C5547217BD97A00B77B6E /* GoogleService-Info.plist */,
-				FC8C5533217BD79300B77B6E /* Info.plist */,
+				FC52A009217CBCBF00886C76 /* App */,
+				FC52A00A217CBCC400886C76 /* Modules */,
+				FC52A008217CBC0600886C76 /* Supporting Files */,
 			);
 			path = "Muslim Quiz";
 			sourceTree = "<group>";
@@ -184,6 +233,11 @@
 				TargetAttributes = {
 					FC8C5523217BD79000B77B6E = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
 					};
 					FC8C5537217BD79300B77B6E = {
 						CreatedOnToolsVersion = 10.0;
@@ -216,9 +270,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC8C5532217BD79300B77B6E /* LaunchScreen.storyboard in Resources */,
-				FC8C5548217BD97A00B77B6E /* GoogleService-Info.plist in Resources */,
+				FC52A018217CC7FA00886C76 /* GoogleService-Info.plist in Resources */,
 				FC8C552F217BD79300B77B6E /* Assets.xcassets in Resources */,
-				FC8C552D217BD79100B77B6E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,14 +338,52 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Muslim Quiz/Pods-Muslim Quiz-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/BugfenderSDK/BugfenderSDK.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+				"${BUILT_PRODUCTS_DIR}/VK-ios-sdk/VK_ios_sdk.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BugfenderSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VK_ios_sdk.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,8 +398,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC8C552A217BD79100B77B6E /* ViewController.swift in Sources */,
+				FC52A00E217CBCF700886C76 /* DeeplinkHandler.swift in Sources */,
+				FC52A016217CC0EF00886C76 /* NotificationHandler.swift in Sources */,
+				FC52A01B217CCADC00886C76 /* StartRouter.swift in Sources */,
+				FC8C552A217BD79100B77B6E /* StartViewController.swift in Sources */,
+				FC52A010217CBCFF00886C76 /* QuizConfigurator.swift in Sources */,
+				FC52A01D217CCAE400886C76 /* StartPresenter.swift in Sources */,
 				FC8C5528217BD79100B77B6E /* AppDelegate.swift in Sources */,
+				FC52A00C217CBCEA00886C76 /* AppConfigurator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,14 +428,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FC8C552B217BD79100B77B6E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FC8C552C217BD79100B77B6E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FC8C5530217BD79300B77B6E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -401,7 +490,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -456,7 +545,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -471,9 +560,11 @@
 			baseConfigurationReference = C3F2D16E48BFEB5FF4D1C116 /* Pods-Muslim Quiz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = "Muslim Quiz/Supporting Files/Muslim Quiz.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5P8935L6RT;
-				INFOPLIST_FILE = "Muslim Quiz/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Muslim Quiz/Supporting Files/Muslim-Quiz.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -490,9 +581,11 @@
 			baseConfigurationReference = 1A98D91044A6B0A8D7454E4F /* Pods-Muslim Quiz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = "Muslim Quiz/Supporting Files/Muslim Quiz.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5P8935L6RT;
-				INFOPLIST_FILE = "Muslim Quiz/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Muslim Quiz/Supporting Files/Muslim-Quiz.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

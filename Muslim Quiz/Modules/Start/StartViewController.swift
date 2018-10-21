@@ -8,7 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+protocol StartViewControllerProtocol {
+    
+}
+
+class StartViewController: UIViewController, StartViewControllerProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
