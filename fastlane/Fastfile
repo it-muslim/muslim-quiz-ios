@@ -3,23 +3,64 @@ update_fastlane
 # TestFlight Docs
 # https://docs.fastlane.tools/actions/testflight/
 
+# Links
+# - General
+# https://medium.com/practo-engineering/build-distribution-automation-with-fastlane-and-travis-ci-ios-f959dff2799f
+# - Deploy Key
+# https://medium.com/@tjkangs/travisci-circleci-2-0-with-fastlane-for-react-native-both-ios-and-android-3f99b71b8691
+
 lane :beta do
 
 	setup_travis
 
-	# 1. ensure_git_status_clean
-	# 2. increment version
-
-	changelog = changelog_from_git_commits(
-		pretty: "%b",
-		merge_commit_filtering: "only_include_merges",
-		date_format: "short")
+	begin
+		delete_keychain(
+	      name: ENV["MATCH_KEYCHAIN_NAME"]
+	      )
+	rescue => ex
+	end
 
 	begin
+		create_keychain(
+	      name: ENV["MATCH_KEYCHAIN_NAME"],
+	      password: ENV["MATCH_KEYCHAIN_PASSWORD"],
+	      default_keychain: true,
+	      unlock: true,
+	      timeout: 3600,
+	      add_to_search_list: true
+	    )
+
+	    unlock_keychain(
+	      path: ENV["MATCH_KEYCHAIN_NAME"],
+	      add_to_search_list: :replace,
+	      password: ENV['MATCH_KEYCHAIN_PASSWORD']
+	    )
+
+		match(
+			type: "adhoc",
+			keychain_name: ENV["MATCH_KEYCHAIN_NAME"],
+			keychain_password: ENV["MATCH_KEYCHAIN_PASSWORD"],
+			git_url: "git@github.com:aminbenarieb/muslim-quiz-ios-match.git",
+			app_identifier: "com.aminbenarieb.muslim-quiz"
+			)
+
+		increment_build_number(
+			xcodeproj: "Muslim Quiz.xcodeproj"
+			)
+
+		cocoapods
+
 		build_app(
 			scheme: "Muslim Quiz",
-			export_method: "development",
+			clean: true,
+			workspace: "Muslim Quiz.xcworkspace",
+			export_method: "ad-hoc",
 			include_symbols: false)
+
+		changelog = changelog_from_git_commits(
+			pretty: "%b",
+			merge_commit_filtering: "only_include_merges",
+			date_format: "short")
 
 		upload_to_testflight(
 			changelog: changelog,
@@ -31,10 +72,45 @@ lane :beta do
 		# 3. commit_version_bump - commit incremeted version
 		# 4. add_git_tag - for releases
 		# 5. push_to_git_remote - 
-		# 6. slack notification
+
+		slack(
+			pretext: "Assalamy aleikum",
+		    message: "App successfully released!",
+		    slack_url: ENV["SLACK_WEB_HOOK"],
+		    success: true, 
+		    payload: { 
+		    	"Output" => exception.error_info.to_s,
+		    	"Build Date" => Time.new.to_s,
+		    	"Built by" => "Travis",
+		    }
+		    # default_payloads: [:git_branch, :git_author]
+		)
 
 	rescue => ex
 		# restore git state
+		delete_keychain(
+	      name: ENV["MATCH_KEYCHAIN_NAME"]
+	      )
+		slack(
+		    message: ex.to_s, 
+		    slack_url: ENV["SLACK_WEB_HOOK"],
+		    success: false, 
+		    payload: { 
+		    	"Output" => ex.error_info.to_s
+		    } 
+		  )
 	end
 
+end
+
+
+error do |lane, exception|
+  slack(
+    message: exception.to_s, 
+    slack_url: ENV["SLACK_WEB_HOOK"],
+    success: false, 
+    payload: { 
+    	"Output" => exception.error_info.to_s
+    } 
+  )
 end
