@@ -1,0 +1,20 @@
+language: swift
+xcode_workspace: Muslim Quiz.xcworkspace
+xcode_scheme: Muslim Quiz
+cache: cocoapods
+osx_image: xcode10
+notifications:
+  email:
+    on_success: always
+    on_failure: never
+    - amin.benarieb@gmail.com
+
+before_install: #before_script:
+  - bundle update
+  - openssl aes-256-cbc -K $encrypted_0c48b83b2f58_key -iv $encrypted_0c48b83b2f58_iv -in deploy.enc -out deploy -d
+  - echo -e "Host github.com\n\tHostName github.com\n\tUser git\n\tIdentityFile ~/.ssh/deploy_key\n" >> ~/.ssh/config
+  - ssh-keyscan github.com >> ~/.ssh/known_hosts
+  - chmod 600 ~/.ssh/deploy_key
+install: #script
+  - bundle install
+# after_success: travis/after_success_script.sh
