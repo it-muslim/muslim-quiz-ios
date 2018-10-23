@@ -7,8 +7,9 @@ notifications:
   email:
     - amin.benarieb@gmail.com
 
-before_script: 
+before_install: 
   - bundle update
+before_script: 
   - openssl aes-256-cbc -K $encrypted_0c48b83b2f58_key -iv $encrypted_0c48b83b2f58_iv -in deploy_key.enc -out deploy_key -d
   - chmod 600 deploy_key
   - eval $(ssh-agent -s)
