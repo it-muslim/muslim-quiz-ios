@@ -7,7 +7,7 @@ notifications:
   email:
     - amin.benarieb@gmail.com
 
-before_install: #before_script:
+before_script: 
   - bundle update
   - openssl aes-256-cbc -K $encrypted_0c48b83b2f58_key -iv $encrypted_0c48b83b2f58_iv -in deploy_key.enc -out deploy_key -d
   - chmod 600 deploy_key
@@ -16,6 +16,6 @@ before_install: #before_script:
   # - echo -e "Host github.com\n\tHostName github.com\n\tUser git\n\tIdentityFile ~/.ssh/deploy\n" >> ~/.ssh/config
   # - ssh-keyscan github.com >> ~/.ssh/known_hosts
   # - chmod 600 ~/.ssh/deploy
-install: #script
-  - bundle install
+script:
+  - fastlane beta --verbose
 # after_success: travis/after_success_script.sh
