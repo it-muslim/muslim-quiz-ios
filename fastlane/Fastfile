@@ -41,7 +41,8 @@ lane :beta do
 			keychain_name: ENV["MATCH_KEYCHAIN_NAME"],
 			keychain_password: ENV["MATCH_KEYCHAIN_PASSWORD"],
 			git_url: "git@github.com:aminbenarieb/muslim-quiz-ios-match.git",
-			app_identifier: "com.aminbenarieb.muslim-quiz"
+			app_identifier: "com.aminbenarieb.muslim-quiz",
+			force: true
 			)
 
 		increment_build_number(
@@ -62,12 +63,12 @@ lane :beta do
 			merge_commit_filtering: "only_include_merges",
 			date_format: "short")
 
-		upload_to_testflight(
-			changelog: changelog,
-			username: "amin.benarieb@gmail.com",
-			app_identifier: "com.aminbenarieb.muslim-quiz",
-			skip_waiting_for_build_processing: true
-			)
+		# upload_to_testflight(
+		# 	changelog: changelog,
+		# 	username: "amin.benarieb@gmail.com",
+		# 	app_identifier: "com.aminbenarieb.muslim-quiz",
+		# 	skip_waiting_for_build_processing: true
+			# )
 
 		# 3. commit_version_bump - commit incremeted version
 		# 4. add_git_tag - for releases
@@ -75,11 +76,10 @@ lane :beta do
 
 		slack(
 			pretext: "Assalamy aleikum",
-		    message: "App successfully released!",
+		    message: "App successfully builded!",
 		    slack_url: ENV["SLACK_WEB_HOOK"],
 		    success: true, 
 		    payload: { 
-		    	"Output" => exception.error_info.to_s,
 		    	"Build Date" => Time.new.to_s,
 		    	"Built by" => "Travis",
 		    }
