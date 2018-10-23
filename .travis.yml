@@ -9,10 +9,13 @@ notifications:
 
 before_install: #before_script:
   - bundle update
-  - openssl aes-256-cbc -K $encrypted_0c48b83b2f58_key -iv $encrypted_0c48b83b2f58_iv -in deploy.enc -out deploy -d
-  - echo -e "Host github.com\n\tHostName github.com\n\tUser git\n\tIdentityFile ~/.ssh/deploy\n" >> ~/.ssh/config
-  - ssh-keyscan github.com >> ~/.ssh/known_hosts
-  - chmod 600 ~/.ssh/deploy
+  - openssl aes-256-cbc -K $encrypted_0c48b83b2f58_key -iv $encrypted_0c48b83b2f58_iv -in deploy_key.enc -out deploy_key -d
+  - chmod 600 deploy_key
+  - eval $(ssh-agent -s)
+  - ssh-add deploy_key
+  # - echo -e "Host github.com\n\tHostName github.com\n\tUser git\n\tIdentityFile ~/.ssh/deploy\n" >> ~/.ssh/config
+  # - ssh-keyscan github.com >> ~/.ssh/known_hosts
+  # - chmod 600 ~/.ssh/deploy
 install: #script
   - bundle install
 # after_success: travis/after_success_script.sh
