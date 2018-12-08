@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.IDEFoundation.TextSubstitutionFileTemplateKind</string>
+	<key>Description</key>
+	<string>Generates Swinject MVP Swift module.</string>
+	<key>Summary</key>
+	<string>Swinject MVP Swift module</string>
+	<key>SortOrder</key>
+	<integer>1</integer>
+	<key>DefaultCompletionName</key>
+	<string>MyModule</string>
+	<key>AllowedTypes</key>
+	<array>
+		<string>public.swift-source</string>
+	</array>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Default</key>
+			<string>MyModule</string>
+			<key>Description</key>
+			<string>The name of the module to create</string>
+			<key>Identifier</key>
+			<string>moduleName</string>
+			<key>Name</key>
+			<string>New Module Name:</string>
+			<key>NotPersisted</key>
+			<true/>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_moduleName___</string>
+			<key>Identifier</key>
+			<string>productName</string>
+			<key>Type</key>
+			<string>static</string>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_moduleName___View</string>
+			<key>Description</key>
+			<string>View protocol name</string>
+			<key>Identifier</key>
+			<string>viewProtocolName</string>
+			<key>Name</key>
+			<string>View Protocol Name:</string>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>static</string>
+			<key>SortOrder</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_moduleName___ViewController</string>
+			<key>Description</key>
+			<string>ViewController name</string>
+			<key>Identifier</key>
+			<string>viewControllerName</string>
+			<key>Name</key>
+			<string>ViewController Name:</string>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>static</string>
+			<key>SortOrder</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_moduleName___RouterProtocol</string>
+			<key>Description</key>
+			<string>Router protocol name</string>
+			<key>Identifier</key>
+			<string>routerProtocolName</string>
+			<key>Name</key>
+			<string>Router Protocol Name:</string>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>static</string>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_moduleName___Router</string>
+			<key>Description</key>
+			<string>Router name</string>
+			<key>Identifier</key>
+			<string>routerName</string>
+			<key>Name</key>
+			<string>Router Implementation Name:</string>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>static</string>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_moduleName___PresenterProtocol</string>
+			<key>Description</key>
+			<string>The presenter protocol</string>
+			<key>Identifier</key>
+			<string>presenterProtocolName</string>
+			<key>Name</key>
+			<string>Presenter protocol:</string>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>static</string>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_moduleName___Presenter</string>
+			<key>Description</key>
+			<string>The presenter name</string>
+			<key>Identifier</key>
+			<string>presenterName</string>
+			<key>Name</key>
+			<string>Presenter Name:</string>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>static</string>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_moduleName___AssemblyProtocol</string>
+			<key>Description</key>
+			<string>The assembly protocol</string>
+			<key>Identifier</key>
+			<string>assemblyProtocolName</string>
+			<key>Name</key>
+			<string>Assembly Protocol:</string>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>static</string>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_moduleName___Assembly</string>
+			<key>Description</key>
+			<string>The assembly name</string>
+			<key>Identifier</key>
+			<string>assemblyName</string>
+			<key>Name</key>
+			<string>Assembly Name:</string>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>static</string>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>myModule</string>
+			<key>Description</key>
+			<string>Prefix for generated Assembly methods</string>
+			<key>Identifier</key>
+			<string>assemblyMethodsPrefix</string>
+			<key>Name</key>
+			<string>Assembly Methods Prefix:</string>
+			<key>NotPersisted</key>
+			<true/>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+	</array>
+	<key>Platforms</key>
+	<array>
+		<string>com.apple.platform.iphoneos</string>
+	</array>
+</dict>
+</plist>
