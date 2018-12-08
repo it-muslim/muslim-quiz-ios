@@ -10,18 +10,18 @@ end
 
 
 def networking
-    pod 'Alamofire'
+#    pod 'Alamofire'
     pod 'SwiftyJSON'
 end
 
 def reactive
-    pod 'RxSwift'
-    pod 'RxCocoa'
-    pod 'RxAlamofire'
+#    pod 'RxSwift'
+#    pod 'RxCocoa'
+#    pod 'RxAlamofire'
 end
 
 def database
-    pod 'Realm'
+#    pod 'Realm'
 end
 
 def logging
@@ -30,6 +30,7 @@ def logging
 end
 
 def ui
+    pod 'IGListKit'
     pod 'SnapKit'
     pod 'SDWebImage'
     pod 'MBProgressHUD'
