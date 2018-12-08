@@ -32,21 +32,27 @@ protocol AppConfiguratorProtocol {
 class AppConfigurator : AppConfiguratorProtocol {
 
     // DI Container
-    let container : Container = {
+    private let container : Container = {
         let container = Container()
-        container.register(StartViewControllerProtocol.self) { r in
-            let controller = StartViewController()
-            return controller
-        }
+        container.register(ServiceAssemblyProtocol.self, factory: { r in
+            return ServiceAssembly()
+        })
+        container.register(StartAssemblyProtocol.self, factory: { r in
+            return StartAssembly(container: container)
+        })
         return container
     }()
+    private var startAssembly: StartAssemblyProtocol!
+    init() {
+        self.startAssembly = self.container.resolve(StartAssemblyProtocol.self)
+    }
     
     func initialSetupApplication(_ application: UIApplication,
                                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?,
                                   with window: inout UIWindow?) {
         // Window
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = container.resolve(StartViewControllerProtocol.self)?.viewController
+        window?.rootViewController = self.startAssembly.startModule()
         window?.makeKeyAndVisible()
         
         // Firebase

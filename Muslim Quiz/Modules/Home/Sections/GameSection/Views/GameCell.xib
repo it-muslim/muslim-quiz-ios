@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="GameCell" customModule="Muslim_Quiz" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="369" height="68"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="369" height="68"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E08-Ha-fZk">
+                        <rect key="frame" x="343" y="10" width="11" height="48"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Осталось 3 мин." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T9i-Dv-FmI">
+                        <rect key="frame" x="206" y="0.0" width="132" height="68"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z47-Gh-7eI">
+                        <rect key="frame" x="15" y="0.0" width="42" height="68"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="T9i-Dv-FmI" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="A0Q-fw-Yen"/>
+                <constraint firstAttribute="bottom" secondItem="z47-Gh-7eI" secondAttribute="bottom" id="B0C-6R-bjo"/>
+                <constraint firstAttribute="bottom" secondItem="T9i-Dv-FmI" secondAttribute="bottom" id="Cql-1x-UBG"/>
+                <constraint firstAttribute="bottom" secondItem="E08-Ha-fZk" secondAttribute="bottom" constant="10" id="DRo-Ja-xqS"/>
+                <constraint firstItem="z47-Gh-7eI" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="KaV-eL-ZCx"/>
+                <constraint firstItem="E08-Ha-fZk" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="KiX-9w-YL6"/>
+                <constraint firstAttribute="trailing" secondItem="E08-Ha-fZk" secondAttribute="trailing" constant="15" id="Ljm-uo-1E6"/>
+                <constraint firstItem="E08-Ha-fZk" firstAttribute="leading" secondItem="T9i-Dv-FmI" secondAttribute="trailing" constant="5" id="MLI-Fg-qDl"/>
+                <constraint firstItem="z47-Gh-7eI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="nsL-Zx-aYh"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="369" height="68"/>
+            <connections>
+                <outlet property="timeLeftLabel" destination="T9i-Dv-FmI" id="c1t-F3-LfQ"/>
+                <outlet property="titleLabel" destination="z47-Gh-7eI" id="WjS-3w-nh0"/>
+            </connections>
+            <point key="canvasLocation" x="170.40000000000001" y="97.151424287856074"/>
+        </collectionViewCell>
+    </objects>
+</document>

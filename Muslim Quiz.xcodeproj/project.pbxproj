@@ -7,18 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5CADF58D25A117D851CD6DC0 /* Pods_Muslim_QuizTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0872E5FA3B9CB6EA3DBC3118 /* Pods_Muslim_QuizTests.framework */; };
+		FAD9B17DAF27087E9FC51DA0 /* Pods_Muslim_Quiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAACB619E7C9C8E0EAF417FD /* Pods_Muslim_Quiz.framework */; };
+		FC3BDFE521BC20A6002ADF7F /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3BDFE021BC20A6002ADF7F /* HomePresenter.swift */; };
+		FC3BDFE621BC20A6002ADF7F /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3BDFE121BC20A6002ADF7F /* HomeRouter.swift */; };
+		FC3BDFE721BC20A6002ADF7F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3BDFE221BC20A6002ADF7F /* HomeViewController.swift */; };
+		FC3BDFE821BC20A6002ADF7F /* HomeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3BDFE321BC20A6002ADF7F /* HomeAssembly.swift */; };
+		FC3BDFE921BC20A6002ADF7F /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC3BDFE421BC20A6002ADF7F /* HomeViewController.xib */; };
+		FC3BDFED21BC221F002ADF7F /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3BDFEB21BC221F002ADF7F /* GameCell.swift */; };
+		FC3BDFEE21BC221F002ADF7F /* GameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC3BDFEC21BC221F002ADF7F /* GameCell.xib */; };
+		FC3BDFF121BC223D002ADF7F /* GamesHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3BDFEF21BC223D002ADF7F /* GamesHeaderView.swift */; };
+		FC3BDFF221BC223D002ADF7F /* GamesHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC3BDFF021BC223D002ADF7F /* GamesHeaderView.xib */; };
+		FC3BDFFB21BC28D8002ADF7F /* GameSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3BDFFA21BC28D8002ADF7F /* GameSectionController.swift */; };
+		FC3BE00221BC2BF5002ADF7F /* SectionSourceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3BE00121BC2BF5002ADF7F /* SectionSourceService.swift */; };
+		FC3BE00521BC3CD7002ADF7F /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3BE00421BC3CD7002ADF7F /* Models.swift */; };
+		FC3BE00821BC3D9C002ADF7F /* GameSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3BE00721BC3D9C002ADF7F /* GameSection.swift */; };
 		FC52A00C217CBCEA00886C76 /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC52A00B217CBCEA00886C76 /* AppConfigurator.swift */; };
 		FC52A00E217CBCF700886C76 /* DeeplinkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC52A00D217CBCF700886C76 /* DeeplinkHandler.swift */; };
 		FC52A010217CBCFF00886C76 /* QuizConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC52A00F217CBCFF00886C76 /* QuizConfigurator.swift */; };
 		FC52A016217CC0EF00886C76 /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC52A015217CC0EF00886C76 /* NotificationHandler.swift */; };
 		FC52A018217CC7FA00886C76 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC52A017217CC7FA00886C76 /* GoogleService-Info.plist */; };
-		FC52A01B217CCADC00886C76 /* StartRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC52A01A217CCADC00886C76 /* StartRouter.swift */; };
-		FC52A01D217CCAE400886C76 /* StartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC52A01C217CCAE400886C76 /* StartPresenter.swift */; };
 		FC8C5528217BD79100B77B6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8C5527217BD79100B77B6E /* AppDelegate.swift */; };
-		FC8C552A217BD79100B77B6E /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8C5529217BD79100B77B6E /* StartViewController.swift */; };
 		FC8C552F217BD79300B77B6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC8C552E217BD79300B77B6E /* Assets.xcassets */; };
 		FC8C5532217BD79300B77B6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC8C5530217BD79300B77B6E /* LaunchScreen.storyboard */; };
 		FC8C553D217BD79300B77B6E /* Muslim_QuizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8C553C217BD79300B77B6E /* Muslim_QuizTests.swift */; };
+		FCB8766E21BBCA9400A8284D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB8766D21BBCA9400A8284D /* ViewController.swift */; };
+		FCB8767021BBCA9D00A8284D /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB8766F21BBCA9D00A8284D /* Presenter.swift */; };
+		FCB8767221BBCAAA00A8284D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB8767121BBCAAA00A8284D /* Router.swift */; };
+		FCB8767E21BBD30B00A8284D /* ServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB8767D21BBD30B00A8284D /* ServiceAssembly.swift */; };
+		FCB8768221BBDE5700A8284D /* ColorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB8768121BBDE5700A8284D /* ColorService.swift */; };
+		FCBAF8A521BC1E9F00A596E3 /* StartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBAF8A021BC1E9F00A596E3 /* StartPresenter.swift */; };
+		FCBAF8A621BC1E9F00A596E3 /* StartRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBAF8A121BC1E9F00A596E3 /* StartRouter.swift */; };
+		FCBAF8A721BC1E9F00A596E3 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBAF8A221BC1E9F00A596E3 /* StartViewController.swift */; };
+		FCBAF8A821BC1E9F00A596E3 /* StartAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBAF8A321BC1E9F00A596E3 /* StartAssembly.swift */; };
+		FCBAF8A921BC1E9F00A596E3 /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCBAF8A421BC1E9F00A596E3 /* StartViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,23 +54,49 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0872E5FA3B9CB6EA3DBC3118 /* Pods_Muslim_QuizTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Muslim_QuizTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CE0979DACABE6CFF64D92FF /* Pods-Muslim Quiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muslim Quiz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Muslim Quiz/Pods-Muslim Quiz.debug.xcconfig"; sourceTree = "<group>"; };
+		BD18956E2BA0C90685648611 /* Pods-Muslim Quiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muslim Quiz.release.xcconfig"; path = "Pods/Target Support Files/Pods-Muslim Quiz/Pods-Muslim Quiz.release.xcconfig"; sourceTree = "<group>"; };
+		C6E5BADB54D86034F0C22689 /* Pods-Muslim QuizTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muslim QuizTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Muslim QuizTests/Pods-Muslim QuizTests.release.xcconfig"; sourceTree = "<group>"; };
+		DAACB619E7C9C8E0EAF417FD /* Pods_Muslim_Quiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Muslim_Quiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E10DE3B15ACCDFE5C024A79B /* Pods-Muslim QuizTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muslim QuizTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Muslim QuizTests/Pods-Muslim QuizTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FC3BDFE021BC20A6002ADF7F /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		FC3BDFE121BC20A6002ADF7F /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		FC3BDFE221BC20A6002ADF7F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FC3BDFE321BC20A6002ADF7F /* HomeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAssembly.swift; sourceTree = "<group>"; };
+		FC3BDFE421BC20A6002ADF7F /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		FC3BDFEB21BC221F002ADF7F /* GameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
+		FC3BDFEC21BC221F002ADF7F /* GameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameCell.xib; sourceTree = "<group>"; };
+		FC3BDFEF21BC223D002ADF7F /* GamesHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesHeaderView.swift; sourceTree = "<group>"; };
+		FC3BDFF021BC223D002ADF7F /* GamesHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GamesHeaderView.xib; sourceTree = "<group>"; };
+		FC3BDFFA21BC28D8002ADF7F /* GameSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSectionController.swift; sourceTree = "<group>"; };
+		FC3BE00121BC2BF5002ADF7F /* SectionSourceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionSourceService.swift; sourceTree = "<group>"; };
+		FC3BE00421BC3CD7002ADF7F /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		FC3BE00721BC3D9C002ADF7F /* GameSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSection.swift; sourceTree = "<group>"; };
 		FC529FFF217CB58700886C76 /* Muslim Quiz.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Muslim Quiz.entitlements"; sourceTree = "<group>"; };
 		FC52A00B217CBCEA00886C76 /* AppConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurator.swift; sourceTree = "<group>"; };
 		FC52A00D217CBCF700886C76 /* DeeplinkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkHandler.swift; sourceTree = "<group>"; };
 		FC52A00F217CBCFF00886C76 /* QuizConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizConfigurator.swift; sourceTree = "<group>"; };
 		FC52A015217CC0EF00886C76 /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
 		FC52A017217CC7FA00886C76 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		FC52A01A217CCADC00886C76 /* StartRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartRouter.swift; sourceTree = "<group>"; };
-		FC52A01C217CCAE400886C76 /* StartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPresenter.swift; sourceTree = "<group>"; };
 		FC8C5524217BD79100B77B6E /* Muslim Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Muslim Quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC8C5527217BD79100B77B6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FC8C5529217BD79100B77B6E /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		FC8C552E217BD79300B77B6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC8C5531217BD79300B77B6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC8C5533217BD79300B77B6E /* Muslim-Quiz.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Muslim-Quiz.plist"; sourceTree = "<group>"; };
 		FC8C5538217BD79300B77B6E /* Muslim QuizTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Muslim QuizTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC8C553C217BD79300B77B6E /* Muslim_QuizTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Muslim_QuizTests.swift; sourceTree = "<group>"; };
 		FC8C553E217BD79300B77B6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCB8766D21BBCA9400A8284D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FCB8766F21BBCA9D00A8284D /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		FCB8767121BBCAAA00A8284D /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		FCB8767D21BBD30B00A8284D /* ServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAssembly.swift; sourceTree = "<group>"; };
+		FCB8768121BBDE5700A8284D /* ColorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorService.swift; sourceTree = "<group>"; };
+		FCBAF8A021BC1E9F00A596E3 /* StartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPresenter.swift; sourceTree = "<group>"; };
+		FCBAF8A121BC1E9F00A596E3 /* StartRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartRouter.swift; sourceTree = "<group>"; };
+		FCBAF8A221BC1E9F00A596E3 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		FCBAF8A321BC1E9F00A596E3 /* StartAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartAssembly.swift; sourceTree = "<group>"; };
+		FCBAF8A421BC1E9F00A596E3 /* StartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD9B17DAF27087E9FC51DA0 /* Pods_Muslim_Quiz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,12 +112,91 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CADF58D25A117D851CD6DC0 /* Pods_Muslim_QuizTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD14B1B5A262419C5DA06E64 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DAACB619E7C9C8E0EAF417FD /* Pods_Muslim_Quiz.framework */,
+				0872E5FA3B9CB6EA3DBC3118 /* Pods_Muslim_QuizTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EDF88F413CE79A2D64087D13 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2CE0979DACABE6CFF64D92FF /* Pods-Muslim Quiz.debug.xcconfig */,
+				BD18956E2BA0C90685648611 /* Pods-Muslim Quiz.release.xcconfig */,
+				E10DE3B15ACCDFE5C024A79B /* Pods-Muslim QuizTests.debug.xcconfig */,
+				C6E5BADB54D86034F0C22689 /* Pods-Muslim QuizTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FC3BDFDF21BC2085002ADF7F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FC3BDFF821BC28BF002ADF7F /* Sections */,
+				FC3BDFE021BC20A6002ADF7F /* HomePresenter.swift */,
+				FC3BDFE121BC20A6002ADF7F /* HomeRouter.swift */,
+				FC3BDFE221BC20A6002ADF7F /* HomeViewController.swift */,
+				FC3BDFE321BC20A6002ADF7F /* HomeAssembly.swift */,
+				FC3BDFE421BC20A6002ADF7F /* HomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FC3BDFEA21BC219D002ADF7F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FC3BDFEF21BC223D002ADF7F /* GamesHeaderView.swift */,
+				FC3BDFF021BC223D002ADF7F /* GamesHeaderView.xib */,
+				FC3BDFEB21BC221F002ADF7F /* GameCell.swift */,
+				FC3BDFEC21BC221F002ADF7F /* GameCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FC3BDFF821BC28BF002ADF7F /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				FC3BDFF921BC28C8002ADF7F /* GameSection */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		FC3BDFF921BC28C8002ADF7F /* GameSection */ = {
+			isa = PBXGroup;
+			children = (
+				FC3BE00621BC3D91002ADF7F /* Models */,
+				FC3BDFEA21BC219D002ADF7F /* Views */,
+				FC3BDFFA21BC28D8002ADF7F /* GameSectionController.swift */,
+			);
+			path = GameSection;
+			sourceTree = "<group>";
+		};
+		FC3BE00321BC3CB3002ADF7F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FC3BE00421BC3CD7002ADF7F /* Models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FC3BE00621BC3D91002ADF7F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FC3BE00721BC3D9C002ADF7F /* GameSection.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		FC52A008217CBC0600886C76 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +224,8 @@
 		FC52A00A217CBCC400886C76 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FC3BDFDF21BC2085002ADF7F /* Home */,
+				FCB8766C21BBCA7D00A8284D /* MVP */,
 				FC52A019217CCACA00886C76 /* Start */,
 			);
 			path = Modules;
@@ -104,9 +234,11 @@
 		FC52A019217CCACA00886C76 /* Start */ = {
 			isa = PBXGroup;
 			children = (
-				FC8C5529217BD79100B77B6E /* StartViewController.swift */,
-				FC52A01A217CCADC00886C76 /* StartRouter.swift */,
-				FC52A01C217CCAE400886C76 /* StartPresenter.swift */,
+				FCBAF8A021BC1E9F00A596E3 /* StartPresenter.swift */,
+				FCBAF8A121BC1E9F00A596E3 /* StartRouter.swift */,
+				FCBAF8A221BC1E9F00A596E3 /* StartViewController.swift */,
+				FCBAF8A321BC1E9F00A596E3 /* StartAssembly.swift */,
+				FCBAF8A421BC1E9F00A596E3 /* StartViewController.xib */,
 			);
 			path = Start;
 			sourceTree = "<group>";
@@ -117,6 +249,8 @@
 				FC8C5526217BD79100B77B6E /* Muslim Quiz */,
 				FC8C553B217BD79300B77B6E /* Muslim QuizTests */,
 				FC8C5525217BD79100B77B6E /* Products */,
+				EDF88F413CE79A2D64087D13 /* Pods */,
+				DD14B1B5A262419C5DA06E64 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,7 +267,9 @@
 			isa = PBXGroup;
 			children = (
 				FC52A009217CBCBF00886C76 /* App */,
+				FC3BE00321BC3CB3002ADF7F /* Models */,
 				FC52A00A217CBCC400886C76 /* Modules */,
+				FCB8767C21BBD2FA00A8284D /* Services */,
 				FC52A008217CBC0600886C76 /* Supporting Files */,
 			);
 			path = "Muslim Quiz";
@@ -148,6 +284,26 @@
 			path = "Muslim QuizTests";
 			sourceTree = "<group>";
 		};
+		FCB8766C21BBCA7D00A8284D /* MVP */ = {
+			isa = PBXGroup;
+			children = (
+				FCB8767121BBCAAA00A8284D /* Router.swift */,
+				FCB8766F21BBCA9D00A8284D /* Presenter.swift */,
+				FCB8766D21BBCA9400A8284D /* ViewController.swift */,
+			);
+			path = MVP;
+			sourceTree = "<group>";
+		};
+		FCB8767C21BBD2FA00A8284D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FCB8767D21BBD30B00A8284D /* ServiceAssembly.swift */,
+				FCB8768121BBDE5700A8284D /* ColorService.swift */,
+				FC3BE00121BC2BF5002ADF7F /* SectionSourceService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -155,9 +311,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC8C5541217BD79300B77B6E /* Build configuration list for PBXNativeTarget "Muslim Quiz" */;
 			buildPhases = (
+				A26DDFD666883036B2770209 /* [CP] Check Pods Manifest.lock */,
 				FC8C5520217BD79000B77B6E /* Sources */,
 				FC8C5521217BD79000B77B6E /* Frameworks */,
 				FC8C5522217BD79000B77B6E /* Resources */,
+				D70AFCCCD71885EB3D4E5FFF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -172,6 +330,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC8C5544217BD79300B77B6E /* Build configuration list for PBXNativeTarget "Muslim QuizTests" */;
 			buildPhases = (
+				92D906AA79CC83E50F2EE4E0 /* [CP] Check Pods Manifest.lock */,
 				FC8C5534217BD79300B77B6E /* Sources */,
 				FC8C5535217BD79300B77B6E /* Frameworks */,
 				FC8C5536217BD79300B77B6E /* Resources */,
@@ -234,9 +393,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC3BDFF221BC223D002ADF7F /* GamesHeaderView.xib in Resources */,
 				FC8C5532217BD79300B77B6E /* LaunchScreen.storyboard in Resources */,
+				FCBAF8A921BC1E9F00A596E3 /* StartViewController.xib in Resources */,
+				FC3BDFE921BC20A6002ADF7F /* HomeViewController.xib in Resources */,
 				FC52A018217CC7FA00886C76 /* GoogleService-Info.plist in Resources */,
 				FC8C552F217BD79300B77B6E /* Assets.xcassets in Resources */,
+				FC3BDFEE21BC221F002ADF7F /* GameCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,19 +412,136 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		92D906AA79CC83E50F2EE4E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Muslim QuizTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A26DDFD666883036B2770209 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Muslim Quiz-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D70AFCCCD71885EB3D4E5FFF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Muslim Quiz/Pods-Muslim Quiz-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/BugfenderSDK/BugfenderSDK.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+				"${BUILT_PRODUCTS_DIR}/VK-ios-sdk/VK_ios_sdk.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BugfenderSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VK_ios_sdk.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Muslim Quiz/Pods-Muslim Quiz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FC8C5520217BD79000B77B6E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC3BDFE821BC20A6002ADF7F /* HomeAssembly.swift in Sources */,
+				FCBAF8A821BC1E9F00A596E3 /* StartAssembly.swift in Sources */,
 				FC52A00E217CBCF700886C76 /* DeeplinkHandler.swift in Sources */,
+				FCBAF8A521BC1E9F00A596E3 /* StartPresenter.swift in Sources */,
+				FC3BDFE721BC20A6002ADF7F /* HomeViewController.swift in Sources */,
+				FC3BDFF121BC223D002ADF7F /* GamesHeaderView.swift in Sources */,
+				FC3BDFE521BC20A6002ADF7F /* HomePresenter.swift in Sources */,
+				FCB8767E21BBD30B00A8284D /* ServiceAssembly.swift in Sources */,
+				FC3BDFE621BC20A6002ADF7F /* HomeRouter.swift in Sources */,
 				FC52A016217CC0EF00886C76 /* NotificationHandler.swift in Sources */,
-				FC52A01B217CCADC00886C76 /* StartRouter.swift in Sources */,
-				FC8C552A217BD79100B77B6E /* StartViewController.swift in Sources */,
+				FCB8767221BBCAAA00A8284D /* Router.swift in Sources */,
+				FC3BE00821BC3D9C002ADF7F /* GameSection.swift in Sources */,
+				FCB8768221BBDE5700A8284D /* ColorService.swift in Sources */,
+				FCB8767021BBCA9D00A8284D /* Presenter.swift in Sources */,
+				FC3BDFFB21BC28D8002ADF7F /* GameSectionController.swift in Sources */,
+				FCBAF8A621BC1E9F00A596E3 /* StartRouter.swift in Sources */,
+				FCBAF8A721BC1E9F00A596E3 /* StartViewController.swift in Sources */,
+				FCB8766E21BBCA9400A8284D /* ViewController.swift in Sources */,
 				FC52A010217CBCFF00886C76 /* QuizConfigurator.swift in Sources */,
-				FC52A01D217CCAE400886C76 /* StartPresenter.swift in Sources */,
+				FC3BDFED21BC221F002ADF7F /* GameCell.swift in Sources */,
 				FC8C5528217BD79100B77B6E /* AppDelegate.swift in Sources */,
+				FC3BE00221BC2BF5002ADF7F /* SectionSourceService.swift in Sources */,
 				FC52A00C217CBCEA00886C76 /* AppConfigurator.swift in Sources */,
+				FC3BE00521BC3CD7002ADF7F /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +693,7 @@
 		};
 		FC8C5542217BD79300B77B6E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CE0979DACABE6CFF64D92FF /* Pods-Muslim Quiz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -436,6 +717,7 @@
 		};
 		FC8C5543217BD79300B77B6E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD18956E2BA0C90685648611 /* Pods-Muslim Quiz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -459,6 +741,7 @@
 		};
 		FC8C5545217BD79300B77B6E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E10DE3B15ACCDFE5C024A79B /* Pods-Muslim QuizTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -480,6 +763,7 @@
 		};
 		FC8C5546217BD79300B77B6E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6E5BADB54D86034F0C22689 /* Pods-Muslim QuizTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

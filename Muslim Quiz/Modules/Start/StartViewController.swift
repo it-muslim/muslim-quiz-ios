@@ -1,29 +1,34 @@
 //
-//  ViewController.swift
+//  StartViewController.swift
 //  Muslim Quiz
 //
-//  Created by Amin Benarieb on 21/10/2018.
+//  Created by Amin Benarieb on 08/12/2018.
 //  Copyright © 2018 Amin Benarieb. All rights reserved.
 //
 
 import UIKit
 
-protocol StartViewControllerProtocol : class {
-    var viewController : UIViewController { get }
+protocol StartView: ViewProtocol {
+    func configure()
 }
-extension StartViewControllerProtocol where Self: UIViewController {
-    var viewController : UIViewController {
-        return self
+
+class StartViewController: ViewController {
+    
+    var presenter: StartPresenterProtocol!
+    override var presenterRef: PresenterProtocol! {
+        get {
+            return presenter
+        }
     }
-}
-
-class StartViewController: UIViewController, StartViewControllerProtocol {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.view.backgroundColor = .red
+    
+    @IBAction func signIn(_ sender: Any) {
+        self.presenter.signInRequested()
     }
-
-
+    
 }
 
+extension StartViewController: StartView {
+    
+    func configure() { }
+
+}
