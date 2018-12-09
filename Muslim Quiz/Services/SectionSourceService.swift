@@ -30,6 +30,14 @@ class SectionSourceService: NSObject, SectionSourceServiceProtocol {
         switch object {
         case let gameSection as GameSection:
             return GameSectionController(gameSection: gameSection)
+        case let user as User:
+            return UserSectionController(user: user)
+        case let round as Round:
+            return RoundSectionController(round: round)
+        case let gameSummary as Game.Summary:
+            return GameHeaderSectionController(gameSummary: gameSummary)
+        case let gameStatus as Game.Status:
+            return GameFooterSectionController(gameStatus: gameStatus)
         default:
             fatalError("No ListSectionController provided for \(type(of: object))")
         }

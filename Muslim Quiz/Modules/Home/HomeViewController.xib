@@ -13,7 +13,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Muslim_Quiz" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="kdz-ln-M8a" id="TEa-Y3-vkd"/>
-                <outlet property="startGame" destination="DI3-eE-Xvm" id="JDm-c7-VBx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -37,7 +36,10 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="yE4-Tp-pmY"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" title="Начать игру"/>
+                    <connections>
+                        <action selector="startGame:" destination="-1" eventType="touchUpInside" id="nFm-Xq-M2C"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

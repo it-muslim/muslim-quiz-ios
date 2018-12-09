@@ -1,26 +1,25 @@
 //
-//  HomeViewController.swift
+//  UsersViewController.swift
 //  Muslim Quiz
 //
-//  Created by Amin Benarieb on 08/12/2018.
+//  Created by Amin Benarieb on 09/12/2018.
 //  Copyright © 2018 Amin Benarieb. All rights reserved.
 //
 
-import UIKit
 import IGListKit
 
-protocol HomeView: ViewProtocol {
+protocol UsersView: ViewProtocol {
     func configure(listObjects: [ListDiffable])
 }
 
-class HomeViewController: ViewController {
+class UsersViewController: ViewController {
     
     public var adapterDataSource: SectionSourceServiceProtocol!
     private var adapter : ListAdapter!
     
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet var collectionView: UICollectionView!
     
-    var presenter: HomePresenterProtocol!
+    var presenter: UsersPresenterProtocol!
     override var presenterRef: PresenterProtocol! {
         get {
             return presenter
@@ -42,30 +41,18 @@ class HomeViewController: ViewController {
         self.adapter = ListAdapter(updater: ListAdapterUpdater(),
                                    viewController: self)
         let collectionViewLayout = UICollectionViewFlowLayout()
-        collectionViewLayout.sectionHeadersPinToVisibleBounds = true
         self.collectionView.setCollectionViewLayout(collectionViewLayout,
                                                     animated: false)
         self.adapter.collectionView = self.collectionView
         self.adapter.dataSource = self.adapterDataSource
     }
     
-    @IBAction func startGame(_ sender: Any) {
-        self.presenter.startGameRequested()
-    }
 }
 
-extension HomeViewController: HomeView {
+extension UsersViewController: UsersView {
     
     func configure(listObjects: [ListDiffable]) {
         self.adapterDataSource.listObjects = listObjects
     }
 
-}
-
-extension HomeViewController: GameSectionDelegate {
-    
-    func openGame(game: Game) {
-        self.presenter.openGameRequested(game)
-    }
-    
 }

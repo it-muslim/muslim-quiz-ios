@@ -28,14 +28,25 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJK-BE-Mbv">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="toggleCollapse:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="Opi-0q-ytC"/>
+                    </connections>
+                </button>
             </subviews>
             <constraints>
                 <constraint firstItem="jaz-uo-2e6" firstAttribute="top" secondItem="VXr-Tz-HHm" secondAttribute="top" id="2ii-4p-5ON"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="cJK-BE-Mbv" secondAttribute="trailing" id="61T-Lv-cvt"/>
                 <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="jaz-uo-2e6" secondAttribute="trailing" constant="15" id="BPW-ho-4Yb"/>
                 <constraint firstItem="XtB-PI-yAE" firstAttribute="top" secondItem="VXr-Tz-HHm" secondAttribute="top" id="Dyf-Yu-aKy"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="cJK-BE-Mbv" secondAttribute="bottom" id="g9K-NT-NwW"/>
+                <constraint firstItem="cJK-BE-Mbv" firstAttribute="top" secondItem="VXr-Tz-HHm" secondAttribute="top" id="hhQ-3V-hc1"/>
                 <constraint firstItem="XtB-PI-yAE" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" constant="15" id="kGk-Zw-Zmy"/>
                 <constraint firstItem="jaz-uo-2e6" firstAttribute="leading" secondItem="XtB-PI-yAE" secondAttribute="trailing" constant="15" id="nrf-uu-fcp"/>
                 <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="XtB-PI-yAE" secondAttribute="bottom" id="pce-Qe-vrf"/>
+                <constraint firstItem="cJK-BE-Mbv" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="v7B-xF-cS8"/>
                 <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="jaz-uo-2e6" secondAttribute="bottom" id="xwk-Mt-Dly"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
@@ -43,6 +54,7 @@
                 <outlet property="arrowLabel" destination="jaz-uo-2e6" id="WOf-e2-1Ol"/>
                 <outlet property="titleLabel" destination="XtB-PI-yAE" id="Vyi-vV-gus"/>
             </connections>
+            <point key="canvasLocation" x="40" y="46.776611694152926"/>
         </collectionReusableView>
     </objects>
 </document>

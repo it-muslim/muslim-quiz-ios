@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AvatarView" customModule="Muslim_Quiz" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="HKr-xI-93K" id="BcJ-mW-Ddk"/>
+                <outlet property="statusView" destination="tl1-ah-MxJ" id="dEi-hY-lwq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="xyj-xI-RvQ">
+            <rect key="frame" x="0.0" y="0.0" width="52" height="52"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HKr-xI-93K">
+                    <rect key="frame" x="0.0" y="0.0" width="52" height="52"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tl1-ah-MxJ">
+                    <rect key="frame" x="38" y="38" width="14" height="14"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="14" id="9Bt-FR-Z21"/>
+                        <constraint firstAttribute="width" constant="14" id="Lr7-UF-PYJ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="HKr-xI-93K" firstAttribute="top" secondItem="ckI-PQ-OZK" secondAttribute="top" id="2rm-x3-epf"/>
+                <constraint firstAttribute="trailing" secondItem="tl1-ah-MxJ" secondAttribute="trailing" id="Age-AL-5e0"/>
+                <constraint firstAttribute="bottom" secondItem="tl1-ah-MxJ" secondAttribute="bottom" id="EOn-6Z-sYy"/>
+                <constraint firstItem="HKr-xI-93K" firstAttribute="trailing" secondItem="ckI-PQ-OZK" secondAttribute="trailing" id="NaC-G9-f5W"/>
+                <constraint firstItem="HKr-xI-93K" firstAttribute="bottom" secondItem="ckI-PQ-OZK" secondAttribute="bottom" id="RMc-SX-cHh"/>
+                <constraint firstItem="HKr-xI-93K" firstAttribute="leading" secondItem="ckI-PQ-OZK" secondAttribute="leading" id="ZyS-vF-FYf"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="ckI-PQ-OZK"/>
+            <point key="canvasLocation" x="-619.20000000000005" y="-441.67916041979015"/>
+        </view>
+    </objects>
+</document>

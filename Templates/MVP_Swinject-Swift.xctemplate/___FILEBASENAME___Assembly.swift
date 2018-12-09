@@ -8,15 +8,12 @@ protocol ___VARIABLE_assemblyProtocolName___: class {
     
 }
 
-class ___VARIABLE_assemblyName___: Assembly, ___VARIABLE_assemblyProtocolName___ {
+class ___VARIABLE_assemblyName___: ___VARIABLE_assemblyProtocolName___ {
     
-    private let assembler : Assembler
-    init(_ assembler: Assembler) {
-        self.assembler = Assembler([Assembly](),
-                                   parent: assembler)
-    }
+    private let container : Container
+    init(container: Container) {
+        self.container = container
     
-    func assemble(container: Container) {
         container.register(___VARIABLE_viewProtocolName___.self) { r in
             let viewController = ___VARIABLE_viewControllerName___()
             viewController.presenter = r.resolve(___VARIABLE_presenterProtocolName___.self)!
@@ -37,7 +34,7 @@ class ___VARIABLE_assemblyName___: Assembly, ___VARIABLE_assemblyProtocolName___
     }
     
     func ___VARIABLE_assemblyMethodsPrefix___Module() -> UIViewController! {
-        return self.assembler.resolver.resolve(___VARIABLE_viewProtocolName___.self)?.viewController
+        return self.container.resolve(___VARIABLE_viewProtocolName___.self)?.viewController
     }
     
 }

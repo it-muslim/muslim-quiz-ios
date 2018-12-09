@@ -31,6 +31,34 @@
 		FC8C552F217BD79300B77B6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC8C552E217BD79300B77B6E /* Assets.xcassets */; };
 		FC8C5532217BD79300B77B6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC8C5530217BD79300B77B6E /* LaunchScreen.storyboard */; };
 		FC8C553D217BD79300B77B6E /* Muslim_QuizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8C553C217BD79300B77B6E /* Muslim_QuizTests.swift */; };
+		FCAF933F21BC8B1100E41CC1 /* UsersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAF933A21BC8B1100E41CC1 /* UsersPresenter.swift */; };
+		FCAF934021BC8B1100E41CC1 /* UsersRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAF933B21BC8B1100E41CC1 /* UsersRouter.swift */; };
+		FCAF934121BC8B1100E41CC1 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAF933C21BC8B1100E41CC1 /* UsersViewController.swift */; };
+		FCAF934221BC8B1100E41CC1 /* UsersAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAF933D21BC8B1100E41CC1 /* UsersAssembly.swift */; };
+		FCAF934321BC8B1100E41CC1 /* UsersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCAF933E21BC8B1100E41CC1 /* UsersViewController.xib */; };
+		FCAF934621BC8B3B00E41CC1 /* UserSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAF934521BC8B3B00E41CC1 /* UserSectionController.swift */; };
+		FCAF934821BC8B4100E41CC1 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAF934721BC8B4100E41CC1 /* UserCell.swift */; };
+		FCAF934B21BC8B5400E41CC1 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCAF934A21BC8B5400E41CC1 /* UserCell.xib */; };
+		FCAF934E21BC8D3A00E41CC1 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAF934C21BC8D3A00E41CC1 /* AvatarView.swift */; };
+		FCAF934F21BC8D3A00E41CC1 /* AvatarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCAF934D21BC8D3A00E41CC1 /* AvatarView.xib */; };
+		FCAF935221BC9DB100E41CC1 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAF935121BC9DB100E41CC1 /* NibLoadable.swift */; };
+		FCAF937621BD3EB300E41CC1 /* GamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAF937121BD3EB300E41CC1 /* GamePresenter.swift */; };
+		FCAF937721BD3EB300E41CC1 /* GameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAF937221BD3EB300E41CC1 /* GameRouter.swift */; };
+		FCAF937821BD3EB300E41CC1 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAF937321BD3EB300E41CC1 /* GameViewController.swift */; };
+		FCAF937921BD3EB300E41CC1 /* GameAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAF937421BD3EB300E41CC1 /* GameAssembly.swift */; };
+		FCAF937A21BD3EB300E41CC1 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCAF937521BD3EB300E41CC1 /* GameViewController.xib */; };
+		FCAF938321BD3EB900E41CC1 /* RoundSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAF937D21BD3EB900E41CC1 /* RoundSectionController.swift */; };
+		FCAF938421BD3EB900E41CC1 /* RoundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAF937F21BD3EB900E41CC1 /* RoundCell.swift */; };
+		FCAF938521BD3EB900E41CC1 /* RoundResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCAF938021BD3EB900E41CC1 /* RoundResultView.xib */; };
+		FCAF938621BD3EB900E41CC1 /* RoundResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAF938121BD3EB900E41CC1 /* RoundResultView.swift */; };
+		FCAF938721BD3EB900E41CC1 /* RoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCAF938221BD3EB900E41CC1 /* RoundCell.xib */; };
+		FCAF939121BD589E00E41CC1 /* GameSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAF938C21BD589E00E41CC1 /* GameSummaryCell.swift */; };
+		FCAF939221BD589E00E41CC1 /* GameSummaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCAF938D21BD589E00E41CC1 /* GameSummaryCell.xib */; };
+		FCAF939321BD589E00E41CC1 /* GameHeaderSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAF938E21BD589E00E41CC1 /* GameHeaderSectionController.swift */; };
+		FCAF939621BD7B7D00E41CC1 /* GameFooterSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAF939521BD7B7D00E41CC1 /* GameFooterSectionController.swift */; };
+		FCAF939A21BD7B9700E41CC1 /* GameFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAF939821BD7B9700E41CC1 /* GameFooterCell.swift */; };
+		FCAF939B21BD7B9700E41CC1 /* GameFooterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCAF939921BD7B9700E41CC1 /* GameFooterCell.xib */; };
+		FCAF939D21BD822A00E41CC1 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAF939C21BD822A00E41CC1 /* UIImage.swift */; };
 		FCB8766E21BBCA9400A8284D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB8766D21BBCA9400A8284D /* ViewController.swift */; };
 		FCB8767021BBCA9D00A8284D /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB8766F21BBCA9D00A8284D /* Presenter.swift */; };
 		FCB8767221BBCAAA00A8284D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB8767121BBCAAA00A8284D /* Router.swift */; };
@@ -87,6 +115,34 @@
 		FC8C5538217BD79300B77B6E /* Muslim QuizTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Muslim QuizTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC8C553C217BD79300B77B6E /* Muslim_QuizTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Muslim_QuizTests.swift; sourceTree = "<group>"; };
 		FC8C553E217BD79300B77B6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCAF933A21BC8B1100E41CC1 /* UsersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersPresenter.swift; sourceTree = "<group>"; };
+		FCAF933B21BC8B1100E41CC1 /* UsersRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRouter.swift; sourceTree = "<group>"; };
+		FCAF933C21BC8B1100E41CC1 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		FCAF933D21BC8B1100E41CC1 /* UsersAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersAssembly.swift; sourceTree = "<group>"; };
+		FCAF933E21BC8B1100E41CC1 /* UsersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersViewController.xib; sourceTree = "<group>"; };
+		FCAF934521BC8B3B00E41CC1 /* UserSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSectionController.swift; sourceTree = "<group>"; };
+		FCAF934721BC8B4100E41CC1 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		FCAF934A21BC8B5400E41CC1 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
+		FCAF934C21BC8D3A00E41CC1 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		FCAF934D21BC8D3A00E41CC1 /* AvatarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvatarView.xib; sourceTree = "<group>"; };
+		FCAF935121BC9DB100E41CC1 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		FCAF937121BD3EB300E41CC1 /* GamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresenter.swift; sourceTree = "<group>"; };
+		FCAF937221BD3EB300E41CC1 /* GameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRouter.swift; sourceTree = "<group>"; };
+		FCAF937321BD3EB300E41CC1 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		FCAF937421BD3EB300E41CC1 /* GameAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAssembly.swift; sourceTree = "<group>"; };
+		FCAF937521BD3EB300E41CC1 /* GameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
+		FCAF937D21BD3EB900E41CC1 /* RoundSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundSectionController.swift; sourceTree = "<group>"; };
+		FCAF937F21BD3EB900E41CC1 /* RoundCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundCell.swift; sourceTree = "<group>"; };
+		FCAF938021BD3EB900E41CC1 /* RoundResultView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoundResultView.xib; sourceTree = "<group>"; };
+		FCAF938121BD3EB900E41CC1 /* RoundResultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundResultView.swift; sourceTree = "<group>"; };
+		FCAF938221BD3EB900E41CC1 /* RoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoundCell.xib; sourceTree = "<group>"; };
+		FCAF938C21BD589E00E41CC1 /* GameSummaryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSummaryCell.swift; sourceTree = "<group>"; };
+		FCAF938D21BD589E00E41CC1 /* GameSummaryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameSummaryCell.xib; sourceTree = "<group>"; };
+		FCAF938E21BD589E00E41CC1 /* GameHeaderSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameHeaderSectionController.swift; sourceTree = "<group>"; };
+		FCAF939521BD7B7D00E41CC1 /* GameFooterSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFooterSectionController.swift; sourceTree = "<group>"; };
+		FCAF939821BD7B9700E41CC1 /* GameFooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFooterCell.swift; sourceTree = "<group>"; };
+		FCAF939921BD7B9700E41CC1 /* GameFooterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameFooterCell.xib; sourceTree = "<group>"; };
+		FCAF939C21BD822A00E41CC1 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		FCB8766D21BBCA9400A8284D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FCB8766F21BBCA9D00A8284D /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		FCB8767121BBCAAA00A8284D /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -224,9 +280,11 @@
 		FC52A00A217CBCC400886C76 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				FC3BDFDF21BC2085002ADF7F /* Home */,
 				FCB8766C21BBCA7D00A8284D /* MVP */,
 				FC52A019217CCACA00886C76 /* Start */,
+				FC3BDFDF21BC2085002ADF7F /* Home */,
+				FCAF933921BC8AFD00E41CC1 /* Users */,
+				FCAF937021BD3E9400E41CC1 /* Game */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -270,6 +328,7 @@
 				FC3BE00321BC3CB3002ADF7F /* Models */,
 				FC52A00A217CBCC400886C76 /* Modules */,
 				FCB8767C21BBD2FA00A8284D /* Services */,
+				FCAF935021BC9DA400E41CC1 /* Utils */,
 				FC52A008217CBC0600886C76 /* Supporting Files */,
 			);
 			path = "Muslim Quiz";
@@ -282,6 +341,127 @@
 				FC8C553E217BD79300B77B6E /* Info.plist */,
 			);
 			path = "Muslim QuizTests";
+			sourceTree = "<group>";
+		};
+		FCAF933921BC8AFD00E41CC1 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				FCAF934421BC8B2900E41CC1 /* Sections */,
+				FCAF933A21BC8B1100E41CC1 /* UsersPresenter.swift */,
+				FCAF933B21BC8B1100E41CC1 /* UsersRouter.swift */,
+				FCAF933C21BC8B1100E41CC1 /* UsersViewController.swift */,
+				FCAF933D21BC8B1100E41CC1 /* UsersAssembly.swift */,
+				FCAF933E21BC8B1100E41CC1 /* UsersViewController.xib */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		FCAF934421BC8B2900E41CC1 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				FCAF934921BC8B4700E41CC1 /* Views */,
+				FCAF934521BC8B3B00E41CC1 /* UserSectionController.swift */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		FCAF934921BC8B4700E41CC1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FCAF934C21BC8D3A00E41CC1 /* AvatarView.swift */,
+				FCAF934D21BC8D3A00E41CC1 /* AvatarView.xib */,
+				FCAF934721BC8B4100E41CC1 /* UserCell.swift */,
+				FCAF934A21BC8B5400E41CC1 /* UserCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FCAF935021BC9DA400E41CC1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FCAF935121BC9DB100E41CC1 /* NibLoadable.swift */,
+				FCAF939C21BD822A00E41CC1 /* UIImage.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		FCAF937021BD3E9400E41CC1 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				FCAF937B21BD3EB900E41CC1 /* Sections */,
+				FCAF937121BD3EB300E41CC1 /* GamePresenter.swift */,
+				FCAF937221BD3EB300E41CC1 /* GameRouter.swift */,
+				FCAF937321BD3EB300E41CC1 /* GameViewController.swift */,
+				FCAF937421BD3EB300E41CC1 /* GameAssembly.swift */,
+				FCAF937521BD3EB300E41CC1 /* GameViewController.xib */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		FCAF937B21BD3EB900E41CC1 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				FCAF938821BD580E00E41CC1 /* GameHeaderSection */,
+				FCAF937C21BD3EB900E41CC1 /* RoundSection */,
+				FCAF939421BD7B4E00E41CC1 /* GameFooterSection */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		FCAF937C21BD3EB900E41CC1 /* RoundSection */ = {
+			isa = PBXGroup;
+			children = (
+				FCAF937D21BD3EB900E41CC1 /* RoundSectionController.swift */,
+				FCAF937E21BD3EB900E41CC1 /* Views */,
+			);
+			path = RoundSection;
+			sourceTree = "<group>";
+		};
+		FCAF937E21BD3EB900E41CC1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FCAF938121BD3EB900E41CC1 /* RoundResultView.swift */,
+				FCAF938021BD3EB900E41CC1 /* RoundResultView.xib */,
+				FCAF937F21BD3EB900E41CC1 /* RoundCell.swift */,
+				FCAF938221BD3EB900E41CC1 /* RoundCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FCAF938821BD580E00E41CC1 /* GameHeaderSection */ = {
+			isa = PBXGroup;
+			children = (
+				FCAF938921BD589E00E41CC1 /* Views */,
+				FCAF938E21BD589E00E41CC1 /* GameHeaderSectionController.swift */,
+			);
+			path = GameHeaderSection;
+			sourceTree = "<group>";
+		};
+		FCAF938921BD589E00E41CC1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FCAF938C21BD589E00E41CC1 /* GameSummaryCell.swift */,
+				FCAF938D21BD589E00E41CC1 /* GameSummaryCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FCAF939421BD7B4E00E41CC1 /* GameFooterSection */ = {
+			isa = PBXGroup;
+			children = (
+				FCAF939721BD7B8000E41CC1 /* Views */,
+				FCAF939521BD7B7D00E41CC1 /* GameFooterSectionController.swift */,
+			);
+			path = GameFooterSection;
+			sourceTree = "<group>";
+		};
+		FCAF939721BD7B8000E41CC1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FCAF939821BD7B9700E41CC1 /* GameFooterCell.swift */,
+				FCAF939921BD7B9700E41CC1 /* GameFooterCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		FCB8766C21BBCA7D00A8284D /* MVP */ = {
@@ -394,11 +574,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC3BDFF221BC223D002ADF7F /* GamesHeaderView.xib in Resources */,
+				FCAF934321BC8B1100E41CC1 /* UsersViewController.xib in Resources */,
 				FC8C5532217BD79300B77B6E /* LaunchScreen.storyboard in Resources */,
+				FCAF934F21BC8D3A00E41CC1 /* AvatarView.xib in Resources */,
 				FCBAF8A921BC1E9F00A596E3 /* StartViewController.xib in Resources */,
+				FCAF939B21BD7B9700E41CC1 /* GameFooterCell.xib in Resources */,
+				FCAF937A21BD3EB300E41CC1 /* GameViewController.xib in Resources */,
 				FC3BDFE921BC20A6002ADF7F /* HomeViewController.xib in Resources */,
+				FCAF938721BD3EB900E41CC1 /* RoundCell.xib in Resources */,
+				FCAF934B21BC8B5400E41CC1 /* UserCell.xib in Resources */,
 				FC52A018217CC7FA00886C76 /* GoogleService-Info.plist in Resources */,
 				FC8C552F217BD79300B77B6E /* Assets.xcassets in Resources */,
+				FCAF938521BD3EB900E41CC1 /* RoundResultView.xib in Resources */,
+				FCAF939221BD589E00E41CC1 /* GameSummaryCell.xib in Resources */,
 				FC3BDFEE21BC221F002ADF7F /* GameCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -518,29 +706,49 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCAF937821BD3EB300E41CC1 /* GameViewController.swift in Sources */,
+				FCAF934621BC8B3B00E41CC1 /* UserSectionController.swift in Sources */,
 				FC3BDFE821BC20A6002ADF7F /* HomeAssembly.swift in Sources */,
 				FCBAF8A821BC1E9F00A596E3 /* StartAssembly.swift in Sources */,
 				FC52A00E217CBCF700886C76 /* DeeplinkHandler.swift in Sources */,
+				FCAF939321BD589E00E41CC1 /* GameHeaderSectionController.swift in Sources */,
 				FCBAF8A521BC1E9F00A596E3 /* StartPresenter.swift in Sources */,
+				FCAF934221BC8B1100E41CC1 /* UsersAssembly.swift in Sources */,
 				FC3BDFE721BC20A6002ADF7F /* HomeViewController.swift in Sources */,
+				FCAF939D21BD822A00E41CC1 /* UIImage.swift in Sources */,
 				FC3BDFF121BC223D002ADF7F /* GamesHeaderView.swift in Sources */,
+				FCAF934821BC8B4100E41CC1 /* UserCell.swift in Sources */,
 				FC3BDFE521BC20A6002ADF7F /* HomePresenter.swift in Sources */,
 				FCB8767E21BBD30B00A8284D /* ServiceAssembly.swift in Sources */,
 				FC3BDFE621BC20A6002ADF7F /* HomeRouter.swift in Sources */,
+				FCAF939621BD7B7D00E41CC1 /* GameFooterSectionController.swift in Sources */,
 				FC52A016217CC0EF00886C76 /* NotificationHandler.swift in Sources */,
+				FCAF933F21BC8B1100E41CC1 /* UsersPresenter.swift in Sources */,
+				FCAF934021BC8B1100E41CC1 /* UsersRouter.swift in Sources */,
 				FCB8767221BBCAAA00A8284D /* Router.swift in Sources */,
 				FC3BE00821BC3D9C002ADF7F /* GameSection.swift in Sources */,
+				FCAF938421BD3EB900E41CC1 /* RoundCell.swift in Sources */,
 				FCB8768221BBDE5700A8284D /* ColorService.swift in Sources */,
 				FCB8767021BBCA9D00A8284D /* Presenter.swift in Sources */,
+				FCAF938621BD3EB900E41CC1 /* RoundResultView.swift in Sources */,
+				FCAF934E21BC8D3A00E41CC1 /* AvatarView.swift in Sources */,
+				FCAF934121BC8B1100E41CC1 /* UsersViewController.swift in Sources */,
+				FCAF935221BC9DB100E41CC1 /* NibLoadable.swift in Sources */,
+				FCAF937921BD3EB300E41CC1 /* GameAssembly.swift in Sources */,
 				FC3BDFFB21BC28D8002ADF7F /* GameSectionController.swift in Sources */,
+				FCAF937621BD3EB300E41CC1 /* GamePresenter.swift in Sources */,
 				FCBAF8A621BC1E9F00A596E3 /* StartRouter.swift in Sources */,
 				FCBAF8A721BC1E9F00A596E3 /* StartViewController.swift in Sources */,
+				FCAF939A21BD7B9700E41CC1 /* GameFooterCell.swift in Sources */,
 				FCB8766E21BBCA9400A8284D /* ViewController.swift in Sources */,
 				FC52A010217CBCFF00886C76 /* QuizConfigurator.swift in Sources */,
+				FCAF937721BD3EB300E41CC1 /* GameRouter.swift in Sources */,
+				FCAF939121BD589E00E41CC1 /* GameSummaryCell.swift in Sources */,
 				FC3BDFED21BC221F002ADF7F /* GameCell.swift in Sources */,
 				FC8C5528217BD79100B77B6E /* AppDelegate.swift in Sources */,
 				FC3BE00221BC2BF5002ADF7F /* SectionSourceService.swift in Sources */,
 				FC52A00C217CBCEA00886C76 /* AppConfigurator.swift in Sources */,
+				FCAF938321BD3EB900E41CC1 /* RoundSectionController.swift in Sources */,
 				FC3BE00521BC3CD7002ADF7F /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

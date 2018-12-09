@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="GameSummaryCell" customModule="Muslim_Quiz" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="296" height="102"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="296" height="102"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QeR-8B-nnA">
+                        <rect key="frame" x="15" y="0.0" width="266" height="0.0"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bQr-IA-S8F">
+                        <rect key="frame" x="15" y="0.0" width="266" height="102"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ge1-c2-7ZO">
+                                <rect key="frame" x="85" y="0.0" width="96" height="102"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zck-oT-q4j" customClass="AvatarView" customModule="Muslim_Quiz" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="16" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Zck-oT-q4j" secondAttribute="height" multiplier="1:1" id="JMB-Fu-OGi"/>
+                                    <constraint firstAttribute="width" constant="70" id="seg-rN-wAS"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J4p-kA-hUz" customClass="AvatarView" customModule="Muslim_Quiz" customModuleProvider="target">
+                                <rect key="frame" x="196" y="16" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="J4p-kA-hUz" secondAttribute="height" multiplier="1:1" id="YdX-bg-ebS"/>
+                                    <constraint firstAttribute="width" constant="70" id="a7V-W6-4gz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Zck-oT-q4j" firstAttribute="leading" secondItem="bQr-IA-S8F" secondAttribute="leading" id="CQP-3K-aW2"/>
+                            <constraint firstItem="Ge1-c2-7ZO" firstAttribute="top" secondItem="bQr-IA-S8F" secondAttribute="top" id="G0Y-3t-LCH"/>
+                            <constraint firstItem="J4p-kA-hUz" firstAttribute="leading" secondItem="Ge1-c2-7ZO" secondAttribute="trailing" constant="15" id="Tzy-cU-g7Z"/>
+                            <constraint firstAttribute="trailing" secondItem="J4p-kA-hUz" secondAttribute="trailing" id="XTP-Su-NUl"/>
+                            <constraint firstAttribute="bottom" secondItem="Ge1-c2-7ZO" secondAttribute="bottom" id="ahm-0N-Yaa"/>
+                            <constraint firstItem="Ge1-c2-7ZO" firstAttribute="leading" secondItem="Zck-oT-q4j" secondAttribute="trailing" constant="15" id="e9e-ec-N0q"/>
+                            <constraint firstItem="J4p-kA-hUz" firstAttribute="centerY" secondItem="bQr-IA-S8F" secondAttribute="centerY" id="nef-x1-ehR"/>
+                            <constraint firstItem="Zck-oT-q4j" firstAttribute="centerY" secondItem="bQr-IA-S8F" secondAttribute="centerY" id="zC0-Yu-CyT"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="bQr-IA-S8F" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="2vw-Uc-EpT"/>
+                <constraint firstAttribute="trailing" secondItem="QeR-8B-nnA" secondAttribute="trailing" constant="15" id="AbZ-lI-53w"/>
+                <constraint firstItem="QeR-8B-nnA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Da1-3T-bkx"/>
+                <constraint firstAttribute="bottom" secondItem="bQr-IA-S8F" secondAttribute="bottom" id="LCe-HX-YiZ"/>
+                <constraint firstAttribute="trailing" secondItem="bQr-IA-S8F" secondAttribute="trailing" constant="15" id="Vp8-Hv-kcf"/>
+                <constraint firstItem="QeR-8B-nnA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="hX2-tX-wOX"/>
+                <constraint firstItem="bQr-IA-S8F" firstAttribute="top" secondItem="QeR-8B-nnA" secondAttribute="bottom" id="sWG-dN-wbl"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="545" height="285"/>
+            <connections>
+                <outlet property="partnerAvatarView" destination="J4p-kA-hUz" id="6o0-pQ-eai"/>
+                <outlet property="scoreLabel" destination="Ge1-c2-7ZO" id="q6Y-UM-1qA"/>
+                <outlet property="userAvatarView" destination="Zck-oT-q4j" id="HGU-61-a8K"/>
+            </connections>
+            <point key="canvasLocation" x="-250" y="-57"/>
+        </collectionViewCell>
+    </objects>
+</document>

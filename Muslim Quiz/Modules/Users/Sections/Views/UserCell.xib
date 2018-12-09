@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="vQg-cq-RDa" customClass="UserCell" customModule="Muslim_Quiz" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="495" height="72"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="495" height="72"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogE-bk-ivG" userLabel="NumberLabel">
+                        <rect key="frame" x="0.0" y="0.0" width="42" height="72"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u0z-dc-V5q" userLabel="AvatarView" customClass="AvatarView" customModule="Muslim_Quiz" customModuleProvider="target">
+                        <rect key="frame" x="42" y="10" width="52" height="52"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="52" id="KEJ-9l-aH4"/>
+                            <constraint firstAttribute="width" constant="52" id="W5e-ID-TmZ"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Up3-ij-b0W" userLabel="NameLabel">
+                        <rect key="frame" x="94" y="10" width="359" height="20.5"/>
+                        <accessibility key="accessibilityConfiguration" identifier="UserName"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Al-ni-T4G" userLabel="LevelLabel">
+                        <rect key="frame" x="94" y="30.5" width="359" height="31.5"/>
+                        <accessibility key="accessibilityConfiguration" identifier="UserName"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ohj-L1-oUf" userLabel="ScoreLabel">
+                        <rect key="frame" x="453" y="0.0" width="42" height="72"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" link="YES" staticText="YES"/>
+                        </accessibility>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="5Al-ni-T4G" firstAttribute="leading" secondItem="u0z-dc-V5q" secondAttribute="trailing" id="1vc-3v-jWl"/>
+                <constraint firstAttribute="bottom" secondItem="5Al-ni-T4G" secondAttribute="bottom" constant="10" id="7rJ-ZM-4sH"/>
+                <constraint firstItem="Up3-ij-b0W" firstAttribute="top" secondItem="vQg-cq-RDa" secondAttribute="top" constant="10" id="8gb-Um-NWC"/>
+                <constraint firstAttribute="trailing" secondItem="Ohj-L1-oUf" secondAttribute="trailing" id="Fmf-IZ-dt6"/>
+                <constraint firstItem="Ohj-L1-oUf" firstAttribute="top" secondItem="vQg-cq-RDa" secondAttribute="top" id="Gov-DL-BpP"/>
+                <constraint firstItem="Ohj-L1-oUf" firstAttribute="leading" secondItem="5Al-ni-T4G" secondAttribute="trailing" id="J33-gu-rPk"/>
+                <constraint firstItem="Ohj-L1-oUf" firstAttribute="leading" secondItem="Up3-ij-b0W" secondAttribute="trailing" id="QhP-Ud-uW0"/>
+                <constraint firstAttribute="bottom" secondItem="ogE-bk-ivG" secondAttribute="bottom" id="SmK-MY-UpS"/>
+                <constraint firstItem="5Al-ni-T4G" firstAttribute="top" secondItem="Up3-ij-b0W" secondAttribute="bottom" id="UAC-Ui-4rn"/>
+                <constraint firstAttribute="bottom" secondItem="Ohj-L1-oUf" secondAttribute="bottom" id="VnG-vN-Vay"/>
+                <constraint firstItem="Up3-ij-b0W" firstAttribute="leading" secondItem="u0z-dc-V5q" secondAttribute="trailing" id="cYU-BN-PMv"/>
+                <constraint firstItem="ogE-bk-ivG" firstAttribute="leading" secondItem="vQg-cq-RDa" secondAttribute="leading" id="f7N-vR-BhK"/>
+                <constraint firstItem="ogE-bk-ivG" firstAttribute="top" secondItem="vQg-cq-RDa" secondAttribute="top" id="tgt-c3-6O2"/>
+                <constraint firstItem="u0z-dc-V5q" firstAttribute="leading" secondItem="ogE-bk-ivG" secondAttribute="trailing" id="umf-vl-Jwi"/>
+                <constraint firstItem="u0z-dc-V5q" firstAttribute="centerY" secondItem="hgn-gV-9Be" secondAttribute="centerY" id="yye-QA-gRq"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="hgn-gV-9Be"/>
+            <size key="customSize" width="495" height="67"/>
+            <connections>
+                <outlet property="avatarView" destination="u0z-dc-V5q" id="dlB-JN-Quz"/>
+                <outlet property="levelLabel" destination="5Al-ni-T4G" id="t5L-fO-Pfy"/>
+                <outlet property="nameLabel" destination="Up3-ij-b0W" id="siW-zU-bF8"/>
+                <outlet property="numberLabel" destination="ogE-bk-ivG" id="WwV-Qe-L1n"/>
+                <outlet property="scoreLabel" destination="Ohj-L1-oUf" id="9l2-nx-6Gh"/>
+            </connections>
+            <point key="canvasLocation" x="-270" y="106"/>
+        </collectionViewCell>
+    </objects>
+</document>

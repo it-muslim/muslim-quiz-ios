@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="GameFooterCell" customModule="Muslim_Quiz" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="396" height="190"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="396" height="190"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G39-Rz-qNn">
+                        <rect key="frame" x="0.0" y="0.0" width="396" height="190"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="5hY-aK-Y4c">
+                                <rect key="frame" x="0.0" y="0.0" width="396" height="190"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="5hY-aK-Y4c" secondAttribute="bottom" id="7ay-P8-92u"/>
+                            <constraint firstItem="5hY-aK-Y4c" firstAttribute="leading" secondItem="G39-Rz-qNn" secondAttribute="leading" id="NTs-Tq-rKV"/>
+                            <constraint firstAttribute="trailing" secondItem="5hY-aK-Y4c" secondAttribute="trailing" id="fTh-YL-Kvp"/>
+                            <constraint firstItem="5hY-aK-Y4c" firstAttribute="top" secondItem="G39-Rz-qNn" secondAttribute="top" id="ugb-cO-aG5"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="G39-Rz-qNn" secondAttribute="bottom" id="Hzy-RN-NtQ"/>
+                <constraint firstItem="G39-Rz-qNn" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="NXO-q8-kkR"/>
+                <constraint firstItem="G39-Rz-qNn" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="tA3-Sc-gDJ"/>
+                <constraint firstAttribute="trailing" secondItem="G39-Rz-qNn" secondAttribute="trailing" id="wya-fl-6fp"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="396" height="190"/>
+            <connections>
+                <outlet property="stackView" destination="5hY-aK-Y4c" id="pyj-Md-PB9"/>
+            </connections>
+            <point key="canvasLocation" x="-147" y="14"/>
+        </collectionViewCell>
+    </objects>
+</document>

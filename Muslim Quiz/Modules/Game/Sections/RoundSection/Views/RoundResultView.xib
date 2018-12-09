@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RoundResultView" customModule="Muslim_Quiz" customModuleProvider="target">
+            <connections>
+                <outlet property="stackView" destination="6Ue-Aq-kN4" id="kD0-oz-84u"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="P75-VF-Pxt">
+            <rect key="frame" x="0.0" y="0.0" width="297" height="79"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="6Ue-Aq-kN4">
+                    <rect key="frame" x="0.0" y="0.0" width="297" height="79"/>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="6Ue-Aq-kN4" firstAttribute="leading" secondItem="kwQ-mW-DA8" secondAttribute="leading" id="1c0-Xt-2Y6"/>
+                <constraint firstAttribute="bottom" secondItem="6Ue-Aq-kN4" secondAttribute="bottom" id="PsX-se-iWR"/>
+                <constraint firstItem="6Ue-Aq-kN4" firstAttribute="top" secondItem="P75-VF-Pxt" secondAttribute="top" id="S8S-go-WLe"/>
+                <constraint firstItem="kwQ-mW-DA8" firstAttribute="trailing" secondItem="6Ue-Aq-kN4" secondAttribute="trailing" id="u9N-oR-QdC"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="kwQ-mW-DA8"/>
+            <point key="canvasLocation" x="-399" y="-270"/>
+        </view>
+    </objects>
+</document>

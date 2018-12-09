@@ -10,17 +10,23 @@ import Swinject
 
 protocol HomeAssemblyProtocol: class {
     
+    var usersAssembly: UsersAssembly! { get }
+    var gameAssembly: GameAssembly! { get }
     func homeModule() -> UIViewController!
     
 }
 
 class HomeAssembly: HomeAssemblyProtocol {
     
+    var usersAssembly: UsersAssembly!
+    var gameAssembly: GameAssembly!
     private let serviceAssembly : ServiceAssemblyProtocol?
     private let container: Container
     
     init(container: Container) {
         self.container = container
+        self.usersAssembly = UsersAssembly(container: container)
+        self.gameAssembly = GameAssembly(container: container)
         self.serviceAssembly = container.resolve(ServiceAssemblyProtocol.self)
 
         self.container.register(HomeView.self) { r in

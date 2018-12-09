@@ -11,10 +11,12 @@ import IGListKit.IGListDiffable
 class GameSection: Equatable {
     let title: String
     let games: [Game]
+    var collapsed: Bool
     
-    init(title: String, games: [Game]) {
+    init(title: String, games: [Game], collapsed: Bool = false) {
         self.title = title
         self.games = games
+        self.collapsed = collapsed
     }
     
     static func == (lhs: GameSection, rhs: GameSection) -> Bool {
