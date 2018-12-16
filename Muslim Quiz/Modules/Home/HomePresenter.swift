@@ -54,7 +54,8 @@ class HomePresenter : Presenter, HomePresenterProtocol {
                     questions: questions),
                 roundUserInfo: roundUserInfo,
                 roundPartnerInfo: roundPartnerInfo,
-                index: i))
+                index: i,
+                startDate: Date()))
         }
         var games = [Game]()
         for i in 0..<4 {

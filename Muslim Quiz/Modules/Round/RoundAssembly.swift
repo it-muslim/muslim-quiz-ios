@@ -29,6 +29,7 @@ class RoundAssembly: RoundAssemblyProtocol {
             argument = round
             viewController.presenter = r.resolve(RoundPresenterProtocol.self)!
             viewController.adapterDataSource = self.serviceAssembly?.getService()
+            viewController.dialogFactory = r.resolve(DialogFactoryProtocol.self)!
             return viewController
         }
         container.register(RoundPresenterProtocol.self) { r in RoundPresenter(round: argument) }

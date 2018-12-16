@@ -10,7 +10,9 @@ import Foundation
 import IGListKit.IGListDiffable
 
 protocol RoundPresenterProtocol: PresenterProtocol {
-    
+    func reportRequested()
+    func skipRequested()
+    func giveUpRequested()
 }
 
 class RoundPresenter : Presenter, RoundPresenterProtocol {
@@ -31,6 +33,18 @@ class RoundPresenter : Presenter, RoundPresenterProtocol {
         listObjects.append(self.round.quiz.questions[currentQuestionIdx])
         listObjects.append(self.round.status())
         self.view.configure(listObjects: listObjects)
+    }
+    
+    func reportRequested() {
+        
+    }
+    
+    func skipRequested() {
+        
+    }
+    
+    func giveUpRequested() {
+        self.view.showGiveUp()
     }
     
 }

@@ -27,7 +27,8 @@ class RoundHeaderCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     weak var delegate : RoundHeaderDelegate?
     
-    static func height(for roundSummary: Round.RoundSummary, with width: CGFloat) -> CGFloat {
+    static func height(for roundSummary: Round.RoundSummary,
+                       with width: CGFloat) -> CGFloat {
         let attirbutedTitle = RoundHeaderCell.attirbutedTitle(text: roundSummary.title)
         let width = width - RoundHeaderTitleInset.left - RoundHeaderTitleInset.right
         let size = CGSize(width: width, height: 1000)

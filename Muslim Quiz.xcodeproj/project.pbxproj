@@ -45,6 +45,7 @@
 		FC6D8A8321C55D6700987D14 /* RoundQuestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC6D8A8121C55D6700987D14 /* RoundQuestionCell.xib */; };
 		FC6D8A8621C55DD900987D14 /* RoundProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6D8A8421C55DD900987D14 /* RoundProgressCell.swift */; };
 		FC6D8A8721C55DD900987D14 /* RoundProgressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC6D8A8521C55DD900987D14 /* RoundProgressCell.xib */; };
+		FC865D3E21C634560041010A /* DialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC865D3D21C634560041010A /* DialogView.swift */; };
 		FC8C5528217BD79100B77B6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8C5527217BD79100B77B6E /* AppDelegate.swift */; };
 		FC8C552F217BD79300B77B6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC8C552E217BD79300B77B6E /* Assets.xcassets */; };
 		FC8C5532217BD79300B77B6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC8C5530217BD79300B77B6E /* LaunchScreen.storyboard */; };
@@ -143,6 +144,7 @@
 		FC6D8A8121C55D6700987D14 /* RoundQuestionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundQuestionCell.xib; sourceTree = "<group>"; };
 		FC6D8A8421C55DD900987D14 /* RoundProgressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundProgressCell.swift; sourceTree = "<group>"; };
 		FC6D8A8521C55DD900987D14 /* RoundProgressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundProgressCell.xib; sourceTree = "<group>"; };
+		FC865D3D21C634560041010A /* DialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogView.swift; sourceTree = "<group>"; };
 		FC8C5524217BD79100B77B6E /* Muslim Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Muslim Quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC8C5527217BD79100B77B6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC8C552E217BD79300B77B6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -419,6 +421,24 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		FC865D3B21C6342C0041010A /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				FC865D3C21C634440041010A /* Views */,
+				FCAF935021BC9DA400E41CC1 /* Utils */,
+				FCB8767C21BBD2FA00A8284D /* Services */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		FC865D3C21C634440041010A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FC865D3D21C634560041010A /* DialogView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		FC8C551B217BD79000B77B6E = {
 			isa = PBXGroup;
 			children = (
@@ -445,8 +465,7 @@
 				FC52A009217CBCBF00886C76 /* App */,
 				FC3BE00321BC3CB3002ADF7F /* Models */,
 				FC52A00A217CBCC400886C76 /* Modules */,
-				FCB8767C21BBD2FA00A8284D /* Services */,
-				FCAF935021BC9DA400E41CC1 /* Utils */,
+				FC865D3B21C6342C0041010A /* Shared */,
 				FC52A008217CBC0600886C76 /* Supporting Files */,
 			);
 			path = "Muslim Quiz";
@@ -882,6 +901,7 @@
 				FC3BDFED21BC221F002ADF7F /* GameCell.swift in Sources */,
 				FC8C5528217BD79100B77B6E /* AppDelegate.swift in Sources */,
 				FC3BE00221BC2BF5002ADF7F /* SectionSourceService.swift in Sources */,
+				FC865D3E21C634560041010A /* DialogView.swift in Sources */,
 				FC52A00C217CBCEA00886C76 /* AppConfigurator.swift in Sources */,
 				FCAF938321BD3EB900E41CC1 /* RoundSectionController.swift in Sources */,
 				FC6D8A7221C5581A00987D14 /* RoundViewController.swift in Sources */,

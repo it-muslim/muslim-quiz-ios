@@ -10,11 +10,13 @@ import IGListKit
 
 protocol RoundView: ViewProtocol {
     func configure(listObjects: [ListDiffable])
+    func showGiveUp()
 }
 
 class RoundViewController: ViewController {
     
     public var adapterDataSource: SectionSourceServiceProtocol!
+    public var dialogFactory: DialogFactoryProtocol!
     private var adapter : ListAdapter!
     
     @IBOutlet var collectionView: UICollectionView!
@@ -53,6 +55,30 @@ extension RoundViewController: RoundView {
     
     func configure(listObjects: [ListDiffable]) {
         self.adapterDataSource.listObjects = listObjects
+    }
+    
+    func showGiveUp() {
+        self.dialogFactory.present(in: self, status: .giveUp)
+    }
+    
+}
+
+extension RoundViewController: RoundHeaderDelegate {
+    
+    func giveUp() {
+        self.presenter.giveUpRequested()
+    }
+    
+}
+
+
+extension RoundViewController: RoundFooterDelegate {
+    
+    func skip() {
+    }
+    
+    func report() {
+        self.presenter.reportRequested()
     }
     
 }

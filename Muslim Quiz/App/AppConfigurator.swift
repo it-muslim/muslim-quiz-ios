@@ -40,6 +40,9 @@ class AppConfigurator : AppConfiguratorProtocol {
         container.register(StartAssemblyProtocol.self, factory: { r in
             return StartAssembly(container: container)
         })
+        container.register(DialogFactoryProtocol.self, factory: { r in
+            return DialogFactory()
+        })
         return container
     }()
     private var startAssembly: StartAssemblyProtocol!
