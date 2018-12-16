@@ -66,6 +66,7 @@ class Game: Equatable {
             case waiting
             case inProgress
             case finished(Date)
+            case giveUp(Date?)
         }
         
         let identifier: String
@@ -86,6 +87,7 @@ class Game: Equatable {
     let rounds: [Round]
     let startDate: Date?
     let endDate: Date?
+    let giveUp: Bool
     
     static func == (lhs: Game, rhs: Game) -> Bool {
         return lhs.identifier == rhs.identifier &&
@@ -100,13 +102,15 @@ class Game: Equatable {
          user: User, partner: User,
          startDate: Date? = nil,
          endDate: Date? = nil,
-         rounds: [Round]) {
+         rounds: [Round],
+         giveUp: Bool = false) {
         self.identifier = identifier
         self.user = user
         self.partner = partner
         self.startDate = startDate
         self.endDate = endDate
         self.rounds = rounds
+        self.giveUp = giveUp
     }
     
     func summary() -> Summary {
@@ -122,6 +126,10 @@ class Game: Equatable {
     }
 
     func status() -> Status {
+        if self.giveUp {
+            return Status(identifier: self.identifier, status: .giveUp(self.endDate))
+        }
+        
         switch (self.startDate, self.endDate) {
         case (.none, .none):
             return Status(identifier: self.identifier, status: .waiting)
@@ -214,19 +222,79 @@ class RoundUserInfo: Equatable {
 
 class Round: Equatable {
     
+    class RoundSummary: Equatable {
+        let identifier: String
+        let title: String
+        let index: Int
+        let questionCount: Int
+        let questionIndex: Int
+        
+        init(identifier: String,
+             title: String,
+             index: Int,
+             questionCount: Int,
+             questionIndex: Int) {
+            self.identifier = identifier
+            self.title = title
+            self.index = index
+            self.questionCount = questionCount
+            self.questionIndex = questionIndex
+        }
+        
+        static func == (lhs: RoundSummary, rhs: RoundSummary) -> Bool {
+            return lhs.identifier == rhs.identifier &&
+                lhs.title == rhs.title &&
+                lhs.index == rhs.index &&
+                lhs.questionCount == rhs.questionCount &&
+                lhs.questionIndex == rhs.questionIndex;
+        }
+    }
+    
+    class Status: Equatable {
+        enum Status: Equatable {
+            case waiting
+            case inProgress
+            case finished(Date)
+            case givedUp(Date?)
+        }
+        
+        let identifier: String
+        let status: Status
+        init(identifier: String, status: Status) {
+            self.identifier = identifier
+            self.status = status
+        }
+        
+        static func == (lhs: Round.Status, rhs: Round.Status) -> Bool {
+            return lhs.status == rhs.status
+        }
+    }
+    
     let identifier: String
     let quiz: Quiz
     let roundUserInfo: RoundUserInfo
     let roundPartnerInfo: RoundUserInfo
+    let index: Int
+    let giveUp: Bool
+    let startDate: Date?
+    let endDate: Date?
     
     init(identifier: String,
          quiz: Quiz,
          roundUserInfo: RoundUserInfo,
-         roundPartnerInfo: RoundUserInfo) {
+         roundPartnerInfo: RoundUserInfo,
+         index: Int,
+         giveUp: Bool = false,
+         startDate: Date? = nil,
+         endDate: Date? = nil) {
         self.identifier = identifier
         self.quiz = quiz
         self.roundUserInfo = roundUserInfo
         self.roundPartnerInfo = roundPartnerInfo
+        self.index = index
+        self.startDate = startDate
+        self.endDate = endDate
+        self.giveUp = giveUp
     }
     
     static func == (lhs: Round, rhs: Round) -> Bool {
@@ -234,6 +302,29 @@ class Round: Equatable {
             lhs.quiz == rhs.quiz &&
             lhs.roundUserInfo == rhs.roundUserInfo &&
             lhs.roundPartnerInfo == rhs.roundPartnerInfo;
+    }
+    
+    func roundSummary(questionIndex: Int) -> RoundSummary {
+        return RoundSummary(identifier: self.identifier,
+                            title: "Раунд \(self.index) против \(self.roundPartnerInfo.user.name)",
+                            index: self.index,
+                            questionCount: self.quiz.questions.count,
+                            questionIndex: questionIndex)
+    }
+    
+    func status() -> Status {
+        if self.giveUp {
+            return Status(identifier: self.identifier, status: .givedUp(self.endDate))
+        }
+        
+        switch (self.startDate, self.endDate) {
+        case (.none, .none):
+            return Status(identifier: self.identifier, status: .waiting)
+        case (.some, .none):
+            return Status(identifier: self.identifier, status: .inProgress)
+        case (_, .some(let endDate)):
+            return Status(identifier: self.identifier, status: .finished(endDate))
+        }
     }
     
 }
@@ -357,6 +448,34 @@ extension Round: ListDiffable {
     func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
         guard self !== object else { return true }
         guard let object = object as? Round else {return false }
+        return self == object
+    }
+}
+
+
+extension Round.RoundSummary: ListDiffable {
+    
+    func diffIdentifier() -> NSObjectProtocol {
+        return self.identifier as NSObjectProtocol
+    }
+    
+    func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
+        guard self !== object else { return true }
+        guard let object = object as? Round.RoundSummary else {return false }
+        return self == object
+    }
+}
+
+
+extension Round.Status: ListDiffable {
+    
+    func diffIdentifier() -> NSObjectProtocol {
+        return "\(String(describing: type(of: self)))_\(self.identifier)" as NSObjectProtocol
+    }
+    
+    func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
+        guard self !== object else { return true }
+        guard let object = object as? Round.Status else {return false }
         return self == object
     }
 }

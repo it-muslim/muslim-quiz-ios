@@ -11,6 +11,10 @@ import IGListKit.IGListDiffable
 
 protocol GamePresenterProtocol: PresenterProtocol {
     
+    func giveUpRequested()
+    func rematchRequested()
+    func playRequested()
+    
 }
 
 class GamePresenter : Presenter, GamePresenterProtocol {
@@ -18,6 +22,7 @@ class GamePresenter : Presenter, GamePresenterProtocol {
     var router: GameRouterProtocol!
     weak var view: GameView!
     private let game: Game
+    private let roundIndex = 0
     init(game: Game) {
         self.game = game
         super.init()
@@ -29,6 +34,19 @@ class GamePresenter : Presenter, GamePresenterProtocol {
         listObjects.append(contentsOf: self.game.rounds)
         listObjects.append(self.game.status())
         self.view.configure(listObjects: listObjects)
+    }
+    
+    func giveUpRequested() {
+        
+    }
+    
+    func rematchRequested() {
+        
+    }
+    
+    func playRequested() {
+        let round = self.game.rounds[roundIndex]
+        self.router.openRound(round: round)
     }
     
 }

@@ -53,7 +53,8 @@ class HomePresenter : Presenter, HomePresenterProtocol {
                     name: "quiz name \(i)",
                     questions: questions),
                 roundUserInfo: roundUserInfo,
-                roundPartnerInfo: roundPartnerInfo))
+                roundPartnerInfo: roundPartnerInfo,
+                index: i))
         }
         var games = [Game]()
         for i in 0..<4 {
@@ -66,6 +67,7 @@ class HomePresenter : Presenter, HomePresenterProtocol {
                                            name: "Амин \(i)",
                                            level: "Ученик \(i)",
                                             score: 11*i),
+                              startDate: Date(),
                               rounds: rounds))
         }
         var gameSections = [GameSection]()

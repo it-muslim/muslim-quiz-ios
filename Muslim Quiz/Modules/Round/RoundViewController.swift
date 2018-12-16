@@ -1,25 +1,25 @@
 //
-//  GameViewController.swift
+//  RoundViewController.swift
 //  Muslim Quiz
 //
-//  Created by Amin Benarieb on 09/12/2018.
+//  Created by Amin Benarieb on 15/12/2018.
 //  Copyright © 2018 Amin Benarieb. All rights reserved.
 //
 
 import IGListKit
 
-protocol GameView: ViewProtocol {
+protocol RoundView: ViewProtocol {
     func configure(listObjects: [ListDiffable])
 }
 
-class GameViewController: ViewController {
+class RoundViewController: ViewController {
     
     public var adapterDataSource: SectionSourceServiceProtocol!
     private var adapter : ListAdapter!
     
     @IBOutlet var collectionView: UICollectionView!
     
-    var presenter: GamePresenterProtocol!
+    var presenter: RoundPresenterProtocol!
     override var presenterRef: PresenterProtocol! {
         get {
             return presenter
@@ -49,26 +49,10 @@ class GameViewController: ViewController {
     
 }
 
-extension GameViewController: GameView {
+extension RoundViewController: RoundView {
     
     func configure(listObjects: [ListDiffable]) {
         self.adapterDataSource.listObjects = listObjects
-    }
-    
-}
-
-extension GameViewController : GameFooterDelegate {
-    
-    func giveUp() {
-        self.presenter.giveUpRequested()
-    }
-    
-    func play() {
-        self.presenter.playRequested()
-    }
-    
-    func rematch() {
-        self.presenter.rematchRequested()
     }
     
 }

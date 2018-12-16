@@ -30,6 +30,7 @@ class GameFooterSectionController: ListSectionController {
                                                                for: self,
                                                                at: index) as! GameFooterCell
         cell.configure(gameStatus: self.gameStatus)
+        cell.delegate = self.viewController as? GameFooterDelegate
         return cell
     }
     

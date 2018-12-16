@@ -38,6 +38,12 @@ class SectionSourceService: NSObject, SectionSourceServiceProtocol {
             return GameHeaderSectionController(gameSummary: gameSummary)
         case let gameStatus as Game.Status:
             return GameFooterSectionController(gameStatus: gameStatus)
+        case let roundSummary as Round.RoundSummary:
+            return RoundHeaderSectionController(roundSummary: roundSummary)
+        case let question as Question:
+            return RoundQuestionSectionController(question: question)
+        case let roundStatus as Round.Status:
+            return RoundFooterSectionController(status: roundStatus)
         default:
             fatalError("No ListSectionController provided for \(type(of: object))")
         }

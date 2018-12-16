@@ -10,18 +10,21 @@ import Swinject
 
 protocol GameAssemblyProtocol: class {
     
+    var roundsAssembly: RoundAssemblyProtocol! { get }
     func gameModule(game: Game) -> UIViewController!
     
 }
 
 class GameAssembly: GameAssemblyProtocol {
     
-    private let container : Container
+    var roundsAssembly: RoundAssemblyProtocol!
     private let serviceAssembly : ServiceAssemblyProtocol?
+    private let container : Container
     
     init(container: Container) {
         self.container = container
         self.serviceAssembly = container.resolve(ServiceAssemblyProtocol.self)
+        self.roundsAssembly = RoundAssembly(container: container)
     
         var argument: Game?
         container.register(GameView.self) { (r: Resolver, game: Game) -> GameView in

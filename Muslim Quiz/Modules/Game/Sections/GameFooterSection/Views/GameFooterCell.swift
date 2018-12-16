@@ -58,6 +58,7 @@ class GameFooterCell: UICollectionViewCell {
             self.stackView.addArrangedSubview(self.buttonPlay)
             self.stackView.addArrangedSubview(self.buttonGiveUp)
             break
+        case .giveUp(_): fallthrough
         case .finished(_):
             self.stackView.addArrangedSubview(self.buttonRematch)
             break
@@ -66,18 +67,18 @@ class GameFooterCell: UICollectionViewCell {
     
     //MARK: Private
     
-    @objc func giveUp() {
+    @objc private func giveUp() {
         self.delegate?.giveUp()
     }
-    @objc func play() {
+    @objc private func play() {
         self.delegate?.play()
     }
-    @objc func rematch() {
+    @objc private func rematch() {
         self.delegate?.rematch()
     }
 
     //TODO: Replace with fabric
-    func button() -> UIButton {
+    private func button() -> UIButton {
         let button = UIButton(type: .custom)
         button.setTitleColor(.blue, for: .normal)
         button.setBackgroundImage(UIImage.from(color: .gray), for: .normal)
