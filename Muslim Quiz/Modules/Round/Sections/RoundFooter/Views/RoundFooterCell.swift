@@ -51,6 +51,7 @@ class RoundFooterCell: UICollectionViewCell {
             break
         case .waiting: fallthrough
         case .finished(_): fallthrough
+        case .expired(_): fallthrough
         case .givedUp(_):
             self.stackView.addArrangedSubview(self.buttonReport)
             break

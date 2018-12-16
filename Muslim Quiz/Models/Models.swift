@@ -205,9 +205,9 @@ class RoundUserInfo: Equatable {
     }
     let user: User
     let score: Int
-    let status: Status
+    let status: Status?
     
-    init(user: User, score: Int, status: Status) {
+    init(user: User, score: Int, status: Status? = .none) {
         self.user = user
         self.score = score
         self.status = status
@@ -255,6 +255,7 @@ class Round: Equatable {
             case waiting
             case inProgress
             case finished(Date)
+            case expired(Date)
             case givedUp(Date?)
         }
         
@@ -316,13 +317,15 @@ class Round: Equatable {
         if self.giveUp {
             return Status(identifier: self.identifier, status: .givedUp(self.endDate))
         }
-        
-        switch (self.startDate, self.endDate) {
-        case (.none, .none):
+        // Details: https://trello.com/c/vbNkHfPO
+        switch (self.startDate, self.endDate, self.roundUserInfo.status) {
+        case (.none, .none, _):
             return Status(identifier: self.identifier, status: .waiting)
-        case (.some, .none):
+        case (.some, .none, _):
             return Status(identifier: self.identifier, status: .inProgress)
-        case (_, .some(let endDate)):
+        case (_, .some(let endDate), .none):
+            return Status(identifier: self.identifier, status: .expired(endDate))
+        case (_, .some(let endDate), .some(_)):
             return Status(identifier: self.identifier, status: .finished(endDate))
         }
     }
