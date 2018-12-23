@@ -16,7 +16,6 @@ protocol RoundView: ViewProtocol {
 class RoundViewController: ViewController {
     
     public var adapterDataSource: SectionSourceServiceProtocol!
-    public var dialogFactory: DialogFactoryProtocol!
     private var adapter : ListAdapter!
     
     @IBOutlet var collectionView: UICollectionView!

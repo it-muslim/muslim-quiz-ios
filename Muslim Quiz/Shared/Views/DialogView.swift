@@ -17,17 +17,24 @@ enum DialogStatus {
 }
 
 protocol DialogFactoryProtocol {
-    func present(in viewController: UIViewController, status: DialogStatus);
+    func present(in viewController: UIViewController,
+                 title: String,
+                 msg: String,
+                 cancel: String?)
+    func present(in viewController: UIViewController, status: DialogStatus)
 }
 
 class DialogFactory: DialogFactoryProtocol {
     
-    func present(in viewController: UIViewController, status: DialogStatus) {
+    func present(in viewController: UIViewController,
+                 title: String,
+                 msg: String,
+                 cancel: String? = nil) {
         
-        let alertController = UIAlertController(title: "Игра завершена",
-                                                message: self.message(for: status),
+        let alertController = UIAlertController(title: title,
+                                                message: msg,
                                                 preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "Продолжить",
+        alertController.addAction(UIAlertAction(title: "OK",
                                                 style: .cancel,
                                                 handler:
             { (alertAction) in
@@ -38,21 +45,28 @@ class DialogFactory: DialogFactoryProtocol {
                                completion: nil)
     }
     
-    // Private
-    
-    func message(for status: DialogStatus) -> String {
-        switch status {
-        case .draw:
-            return "🤝\n Ничья!"
-        case .win:
-            return "😁\n Вы победили!"
-        case .lose:
-            return "😥\n Вы проиграли!"
-        case .timeIsOver:
-            return "⏱\n Время вышло!"
-        case .giveUp:
-            return "😩\n Сдался"
+    func present(in viewController: UIViewController, status: DialogStatus) {
+        func message(for status: DialogStatus) -> String {
+            switch status {
+            case .draw:
+                return "🤝\n Ничья!"
+            case .win:
+                return "😁\n Вы победили!"
+            case .lose:
+                return "😥\n Вы проиграли!"
+            case .timeIsOver:
+                return "⏱\n Время вышло!"
+            case .giveUp:
+                return "😩\n Сдался"
+            }
         }
+        
+        self.present(in: viewController,
+                     title: "Игра завершена",
+                     msg: message(for: status),
+                     cancel: "Продолжить")
     }
+    
+
     
 }

@@ -28,6 +28,7 @@ class StartAssembly: StartAssemblyProtocol {
         self.container.register(StartView.self) { r in
             let viewController = StartViewController()
             viewController.presenter = r.resolve(StartPresenterProtocol.self)!
+            viewController.dialogFactory = r.resolve(DialogFactoryProtocol.self)!
             return viewController
         }
         self.container.register(StartPresenterProtocol.self) { r in StartPresenter() }

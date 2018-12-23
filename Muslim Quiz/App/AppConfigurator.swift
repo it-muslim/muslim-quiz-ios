@@ -37,27 +37,22 @@ class AppConfigurator : AppConfiguratorProtocol {
         container.register(ServiceAssemblyProtocol.self, factory: { r in
             return ServiceAssembly()
         })
-        container.register(StartAssemblyProtocol.self, factory: { r in
-            return StartAssembly(container: container)
+        container.register(RootAssemblyProtocol.self, factory: { r in
+            return RootAssembly(container: container)
         })
         container.register(DialogFactoryProtocol.self, factory: { r in
             return DialogFactory()
         })
         return container
     }()
-    private var startAssembly: StartAssemblyProtocol!
+    private var rootAssembly: RootAssemblyProtocol!
     init() {
-        self.startAssembly = self.container.resolve(StartAssemblyProtocol.self)
+        self.rootAssembly = self.container.resolve(RootAssemblyProtocol.self)
     }
     
     func initialSetupApplication(_ application: UIApplication,
                                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?,
                                   with window: inout UIWindow?) {
-        // Window
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = self.startAssembly.startModule()
-        window?.makeKeyAndVisible()
-        
         // Firebase
         FirebaseApp.configure()
         
@@ -68,6 +63,11 @@ class AppConfigurator : AppConfiguratorProtocol {
 //        Bugfender.enableUIEventLogging()  // 2. optional, log user interactions automatically
 //        DDLog.add(DDBugfenderLogger.shared) 3. Configure CocoaLumberJack
 //        BFLog("Hello world!") // Use wrapper for logging /
+        
+        // Window
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = self.rootAssembly.rootModule()
+        window?.makeKeyAndVisible()
     }
     
     func applicationWillResignActive(_ application: UIApplication){

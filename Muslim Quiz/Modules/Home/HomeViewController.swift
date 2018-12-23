@@ -52,6 +52,11 @@ class HomeViewController: ViewController {
     @IBAction func startGame(_ sender: Any) {
         self.presenter.startGameRequested()
     }
+
+    @IBAction func signOut(_ sender: Any) {
+        self.presenter.signOutRequested()
+    }
+    
 }
 
 extension HomeViewController: HomeView {

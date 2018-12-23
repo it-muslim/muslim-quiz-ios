@@ -12,6 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StartViewController" customModule="Muslim_Quiz" customModuleProvider="target">
             <connections>
+                <outlet property="emailField" destination="EKd-87-dPz" id="LDZ-QE-40k"/>
+                <outlet property="passwordField" destination="WCz-Un-Pyv" id="CW4-RL-NRB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -24,11 +26,59 @@
                     <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Muslim Quiz" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Gl-XL-enC">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="597"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="347"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EKd-87-dPz">
+                            <rect key="frame" x="0.0" y="347" width="375" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="cy6-y9-53G"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WCz-Un-Pyv">
+                            <rect key="frame" x="0.0" y="397" width="375" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="bo0-Dw-m20"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6v9-z9-I2I">
+                            <rect key="frame" x="0.0" y="447" width="375" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="i8i-Ml-cF3"/>
+                            </constraints>
+                            <state key="normal" title="VK"/>
+                            <connections>
+                                <action selector="vkSignIn:" destination="-1" eventType="touchUpInside" id="zL4-wu-mmL"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5b-BH-dx2">
+                            <rect key="frame" x="0.0" y="497" width="375" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="uL5-rP-yKT"/>
+                            </constraints>
+                            <state key="normal" title="Facebook"/>
+                            <connections>
+                                <action selector="facebookSignIn:" destination="-1" eventType="touchUpInside" id="IAf-XM-qhr"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AUM-Ng-7EL">
+                            <rect key="frame" x="0.0" y="547" width="375" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="iEc-mg-QCO"/>
+                            </constraints>
+                            <state key="normal" title="Google"/>
+                            <connections>
+                                <action selector="googleSignIn:" destination="-1" eventType="touchUpInside" id="1Nk-xe-e0H"/>
+                            </connections>
+                        </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4C5-WW-shx">
                             <rect key="frame" x="0.0" y="597" width="375" height="50"/>
                             <constraints>
