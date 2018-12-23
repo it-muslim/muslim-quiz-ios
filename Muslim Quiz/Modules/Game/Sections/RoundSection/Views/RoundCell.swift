@@ -24,7 +24,7 @@ class RoundCell: UICollectionViewCell {
     
     func configure(number:Int, round: Round) {
         self.titleLabel.text = "Рвунд \(round)"
-        self.topicLabel.text = round.quiz.name
+        self.topicLabel.text = round.topic.name
         self.userRoundUserView.configure(roundUserInfo: round.roundUserInfo)
         self.partnerRoundUserView.configure(roundUserInfo: round.roundPartnerInfo)
     }

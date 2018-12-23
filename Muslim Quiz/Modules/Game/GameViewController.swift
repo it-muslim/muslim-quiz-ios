@@ -9,7 +9,7 @@
 import IGListKit
 
 protocol GameView: ViewProtocol {
-    func configure(listObjects: [ListDiffable])
+    func configure(items: [ListDiffable])
 }
 
 class GameViewController: ViewController {
@@ -51,8 +51,8 @@ class GameViewController: ViewController {
 
 extension GameViewController: GameView {
     
-    func configure(listObjects: [ListDiffable]) {
-        self.adapterDataSource.listObjects = listObjects
+    func configure(items: [ListDiffable]) {
+        self.adapterDataSource.listObjects = items
     }
     
 }

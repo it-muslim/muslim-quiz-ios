@@ -26,8 +26,8 @@
 		FC3BDFF221BC223D002ADF7F /* GamesHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC3BDFF021BC223D002ADF7F /* GamesHeaderView.xib */; };
 		FC3BDFFB21BC28D8002ADF7F /* GameSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3BDFFA21BC28D8002ADF7F /* GameSectionController.swift */; };
 		FC3BE00221BC2BF5002ADF7F /* SectionSourceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3BE00121BC2BF5002ADF7F /* SectionSourceService.swift */; };
-		FC3BE00521BC3CD7002ADF7F /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3BE00421BC3CD7002ADF7F /* Models.swift */; };
 		FC3BE00821BC3D9C002ADF7F /* GameSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3BE00721BC3D9C002ADF7F /* GameSection.swift */; };
+		FC4675E021CFCCA700B8B4B1 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4675DF21CFCCA700B8B4B1 /* Game.swift */; };
 		FC52A00C217CBCEA00886C76 /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC52A00B217CBCEA00886C76 /* AppConfigurator.swift */; };
 		FC52A00E217CBCF700886C76 /* DeeplinkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC52A00D217CBCF700886C76 /* DeeplinkHandler.swift */; };
 		FC52A010217CBCFF00886C76 /* QuizConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC52A00F217CBCFF00886C76 /* QuizConfigurator.swift */; };
@@ -88,6 +88,18 @@
 		FCBAF8A721BC1E9F00A596E3 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBAF8A221BC1E9F00A596E3 /* StartViewController.swift */; };
 		FCBAF8A821BC1E9F00A596E3 /* StartAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBAF8A321BC1E9F00A596E3 /* StartAssembly.swift */; };
 		FCBAF8A921BC1E9F00A596E3 /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCBAF8A421BC1E9F00A596E3 /* StartViewController.xib */; };
+		FCE1930A21CFF7BA00E0D663 /* DiffableBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE1930921CFF7BA00E0D663 /* DiffableBox.swift */; };
+		FCE1930D21CFF98D00E0D663 /* RoundUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE1930C21CFF98D00E0D663 /* RoundUserInfo.swift */; };
+		FCE1930F21CFF99500E0D663 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE1930E21CFF99500E0D663 /* Topic.swift */; };
+		FCE1931121CFF99A00E0D663 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE1931021CFF99A00E0D663 /* Question.swift */; };
+		FCE1931321CFF99F00E0D663 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE1931221CFF99F00E0D663 /* User.swift */; };
+		FCE1931521CFF9D100E0D663 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE1931421CFF9D100E0D663 /* Answer.swift */; };
+		FCE1931721CFFB9D00E0D663 /* Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE1931621CFFB9D00E0D663 /* Round.swift */; };
+		FCEE09BB21CE8FBC00C2FF64 /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEE09B621CE8FBC00C2FF64 /* RootPresenter.swift */; };
+		FCEE09BC21CE8FBC00C2FF64 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEE09B721CE8FBC00C2FF64 /* RootRouter.swift */; };
+		FCEE09BD21CE8FBC00C2FF64 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEE09B821CE8FBC00C2FF64 /* RootViewController.swift */; };
+		FCEE09BE21CE8FBC00C2FF64 /* RootAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEE09B921CE8FBC00C2FF64 /* RootAssembly.swift */; };
+		FCEE09BF21CE8FBC00C2FF64 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCEE09BA21CE8FBC00C2FF64 /* RootViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,8 +136,8 @@
 		FC3BDFF021BC223D002ADF7F /* GamesHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GamesHeaderView.xib; sourceTree = "<group>"; };
 		FC3BDFFA21BC28D8002ADF7F /* GameSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSectionController.swift; sourceTree = "<group>"; };
 		FC3BE00121BC2BF5002ADF7F /* SectionSourceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionSourceService.swift; sourceTree = "<group>"; };
-		FC3BE00421BC3CD7002ADF7F /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		FC3BE00721BC3D9C002ADF7F /* GameSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSection.swift; sourceTree = "<group>"; };
+		FC4675DF21CFCCA700B8B4B1 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		FC529FFF217CB58700886C76 /* Muslim Quiz.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Muslim Quiz.entitlements"; sourceTree = "<group>"; };
 		FC52A00B217CBCEA00886C76 /* AppConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurator.swift; sourceTree = "<group>"; };
 		FC52A00D217CBCF700886C76 /* DeeplinkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkHandler.swift; sourceTree = "<group>"; };
@@ -191,6 +203,18 @@
 		FCBAF8A221BC1E9F00A596E3 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		FCBAF8A321BC1E9F00A596E3 /* StartAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartAssembly.swift; sourceTree = "<group>"; };
 		FCBAF8A421BC1E9F00A596E3 /* StartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartViewController.xib; sourceTree = "<group>"; };
+		FCE1930921CFF7BA00E0D663 /* DiffableBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiffableBox.swift; sourceTree = "<group>"; };
+		FCE1930C21CFF98D00E0D663 /* RoundUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundUserInfo.swift; sourceTree = "<group>"; };
+		FCE1930E21CFF99500E0D663 /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
+		FCE1931021CFF99A00E0D663 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		FCE1931221CFF99F00E0D663 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FCE1931421CFF9D100E0D663 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		FCE1931621CFFB9D00E0D663 /* Round.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Round.swift; sourceTree = "<group>"; };
+		FCEE09B621CE8FBC00C2FF64 /* RootPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPresenter.swift; sourceTree = "<group>"; };
+		FCEE09B721CE8FBC00C2FF64 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		FCEE09B821CE8FBC00C2FF64 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		FCEE09B921CE8FBC00C2FF64 /* RootAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootAssembly.swift; sourceTree = "<group>"; };
+		FCEE09BA21CE8FBC00C2FF64 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,7 +320,13 @@
 		FC3BE00321BC3CB3002ADF7F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FC3BE00421BC3CD7002ADF7F /* Models.swift */,
+				FCE1931221CFF99F00E0D663 /* User.swift */,
+				FCE1930E21CFF99500E0D663 /* Topic.swift */,
+				FCE1931021CFF99A00E0D663 /* Question.swift */,
+				FCE1931421CFF9D100E0D663 /* Answer.swift */,
+				FC4675DF21CFCCA700B8B4B1 /* Game.swift */,
+				FCE1931621CFFB9D00E0D663 /* Round.swift */,
+				FCE1930C21CFF98D00E0D663 /* RoundUserInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -337,6 +367,7 @@
 			isa = PBXGroup;
 			children = (
 				FCB8766C21BBCA7D00A8284D /* MVP */,
+				FCEE09B521CE8FA200C2FF64 /* Root */,
 				FC52A019217CCACA00886C76 /* Start */,
 				FC3BDFDF21BC2085002ADF7F /* Home */,
 				FCAF933921BC8AFD00E41CC1 /* Users */,
@@ -516,6 +547,7 @@
 		FCAF935021BC9DA400E41CC1 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				FCE1930921CFF7BA00E0D663 /* DiffableBox.swift */,
 				FCAF935121BC9DB100E41CC1 /* NibLoadable.swift */,
 				FCAF939C21BD822A00E41CC1 /* UIImage.swift */,
 			);
@@ -621,6 +653,18 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		FCEE09B521CE8FA200C2FF64 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				FCEE09B921CE8FBC00C2FF64 /* RootAssembly.swift */,
+				FCEE09B721CE8FBC00C2FF64 /* RootRouter.swift */,
+				FCEE09B621CE8FBC00C2FF64 /* RootPresenter.swift */,
+				FCEE09B821CE8FBC00C2FF64 /* RootViewController.swift */,
+				FCEE09BA21CE8FBC00C2FF64 /* RootViewController.xib */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -718,6 +762,7 @@
 				FCBAF8A921BC1E9F00A596E3 /* StartViewController.xib in Resources */,
 				FCAF939B21BD7B9700E41CC1 /* GameFooterCell.xib in Resources */,
 				FCAF937A21BD3EB300E41CC1 /* GameViewController.xib in Resources */,
+				FCEE09BF21CE8FBC00C2FF64 /* RootViewController.xib in Resources */,
 				FC3BDFE921BC20A6002ADF7F /* HomeViewController.xib in Resources */,
 				FC26EEE921C5A4BC00D5B23F /* RoundFooterCell.xib in Resources */,
 				FCAF938721BD3EB900E41CC1 /* RoundCell.xib in Resources */,
@@ -856,9 +901,12 @@
 				FCBAF8A821BC1E9F00A596E3 /* StartAssembly.swift in Sources */,
 				FC52A00E217CBCF700886C76 /* DeeplinkHandler.swift in Sources */,
 				FCAF939321BD589E00E41CC1 /* GameHeaderSectionController.swift in Sources */,
+				FCE1931521CFF9D100E0D663 /* Answer.swift in Sources */,
 				FC6D8A7321C5581A00987D14 /* RoundAssembly.swift in Sources */,
 				FC6D8A8621C55DD900987D14 /* RoundProgressCell.swift in Sources */,
+				FCE1931121CFF99A00E0D663 /* Question.swift in Sources */,
 				FCBAF8A521BC1E9F00A596E3 /* StartPresenter.swift in Sources */,
+				FCEE09BB21CE8FBC00C2FF64 /* RootPresenter.swift in Sources */,
 				FCAF934221BC8B1100E41CC1 /* UsersAssembly.swift in Sources */,
 				FC3BDFE721BC20A6002ADF7F /* HomeViewController.swift in Sources */,
 				FCAF939D21BD822A00E41CC1 /* UIImage.swift in Sources */,
@@ -869,6 +917,7 @@
 				FC3BDFE521BC20A6002ADF7F /* HomePresenter.swift in Sources */,
 				FC6D8A7121C5581A00987D14 /* RoundRouter.swift in Sources */,
 				FCB8767E21BBD30B00A8284D /* ServiceAssembly.swift in Sources */,
+				FCE1930F21CFF99500E0D663 /* Topic.swift in Sources */,
 				FC3BDFE621BC20A6002ADF7F /* HomeRouter.swift in Sources */,
 				FCAF939621BD7B7D00E41CC1 /* GameFooterSectionController.swift in Sources */,
 				FC52A016217CC0EF00886C76 /* NotificationHandler.swift in Sources */,
@@ -891,21 +940,28 @@
 				FC26EEE421C5A12700D5B23F /* RoundHeaderCell.swift in Sources */,
 				FCBAF8A621BC1E9F00A596E3 /* StartRouter.swift in Sources */,
 				FCBAF8A721BC1E9F00A596E3 /* StartViewController.swift in Sources */,
+				FCE1931721CFFB9D00E0D663 /* Round.swift in Sources */,
+				FCE1931321CFF99F00E0D663 /* User.swift in Sources */,
 				FCAF939A21BD7B9700E41CC1 /* GameFooterCell.swift in Sources */,
 				FCB8766E21BBCA9400A8284D /* ViewController.swift in Sources */,
 				FC6D8A7E21C55D4B00987D14 /* RoundAnswerCell.swift in Sources */,
+				FCE1930D21CFF98D00E0D663 /* RoundUserInfo.swift in Sources */,
 				FC52A010217CBCFF00886C76 /* QuizConfigurator.swift in Sources */,
+				FCEE09BC21CE8FBC00C2FF64 /* RootRouter.swift in Sources */,
 				FCAF937721BD3EB300E41CC1 /* GameRouter.swift in Sources */,
 				FC6D8A7021C5581A00987D14 /* RoundPresenter.swift in Sources */,
+				FCEE09BD21CE8FBC00C2FF64 /* RootViewController.swift in Sources */,
 				FCAF939121BD589E00E41CC1 /* GameSummaryCell.swift in Sources */,
 				FC3BDFED21BC221F002ADF7F /* GameCell.swift in Sources */,
+				FC4675E021CFCCA700B8B4B1 /* Game.swift in Sources */,
 				FC8C5528217BD79100B77B6E /* AppDelegate.swift in Sources */,
 				FC3BE00221BC2BF5002ADF7F /* SectionSourceService.swift in Sources */,
+				FCE1930A21CFF7BA00E0D663 /* DiffableBox.swift in Sources */,
 				FC865D3E21C634560041010A /* DialogView.swift in Sources */,
 				FC52A00C217CBCEA00886C76 /* AppConfigurator.swift in Sources */,
 				FCAF938321BD3EB900E41CC1 /* RoundSectionController.swift in Sources */,
 				FC6D8A7221C5581A00987D14 /* RoundViewController.swift in Sources */,
-				FC3BE00521BC3CD7002ADF7F /* Models.swift in Sources */,
+				FCEE09BE21CE8FBC00C2FF64 /* RootAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1063,7 +1119,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = "Muslim Quiz/Supporting Files/Muslim Quiz.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = 5P8935L6RT;
 				INFOPLIST_FILE = "Muslim Quiz/Supporting Files/Muslim-Quiz.plist";
@@ -1073,7 +1129,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aminbenarieb.muslim-quiz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match Development com.aminbenarieb.muslim-quiz";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1086,8 +1142,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = "Muslim Quiz/Supporting Files/Muslim Quiz.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = 5P8935L6RT;
 				INFOPLIST_FILE = "Muslim Quiz/Supporting Files/Muslim-Quiz.plist";
@@ -1097,7 +1153,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aminbenarieb.muslim-quiz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc com.aminbenarieb.muslim-quiz";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

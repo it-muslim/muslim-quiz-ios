@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import IGListKit.IGListDiffable
 
 protocol GamePresenterProtocol: PresenterProtocol {
     
@@ -29,11 +28,10 @@ class GamePresenter : Presenter, GamePresenterProtocol {
     }
     
     override func viewDidLoad() {
-        var listObjects = [ListDiffable]()
-        listObjects.append(self.game.summary())
-        listObjects.append(contentsOf: self.game.rounds)
-        listObjects.append(self.game.status())
-        self.view.configure(listObjects: listObjects)
+        let items = [self.game.summary,
+                     self.game.rounds,
+                     self.game.status] as! [Diffable]
+        self.view.configure(items: items.map{ $0.diffable() } )
     }
     
     func giveUpRequested() {

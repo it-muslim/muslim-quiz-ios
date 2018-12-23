@@ -19,13 +19,7 @@ class UsersPresenter : Presenter, UsersPresenterProtocol {
     
     override func viewDidLoad() {
         var users = [User]()
-        for i in 0..<4 {
-            users.append(User(identifier: "user\(i)",
-                name: "Амин \(i)",
-                level: "Студент \(i)",
-                score: 10*i))
-        }
-        self.view.configure(listObjects: users)
+//        self.view.configure(listObjects: users)
     }
     
 }
