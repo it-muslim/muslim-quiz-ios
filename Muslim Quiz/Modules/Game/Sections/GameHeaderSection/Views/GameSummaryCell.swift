@@ -23,10 +23,10 @@ class GameSummaryCell: UICollectionViewCell {
     }
 
     func configure(gameSummary: Game.Summary) {
-        self.userAvatarView.configure(user: gameSummary.userInfo.user)
-        self.partnerAvatarView.configure(user: gameSummary.partnerInfo.user)
+        self.userAvatarView.configure(user: gameSummary.userInfos[0].user)
+        self.partnerAvatarView.configure(user: gameSummary.userInfos[1].user)
         
-        self.scoreLabel.text = "\(gameSummary.userInfo.score) : \(gameSummary.partnerInfo.score)"
+        self.scoreLabel.text = "\(gameSummary.userInfos[0].score) : \(gameSummary.userInfos[1].score)"
     }
     
     //MARK: Private

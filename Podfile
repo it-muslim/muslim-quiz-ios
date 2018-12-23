@@ -11,7 +11,7 @@ end
 
 def networking
 #    pod 'Alamofire'
-    pod 'SwiftyJSON'
+    pod 'ObjectMapper', '~> 3.4'
 end
 
 def reactive

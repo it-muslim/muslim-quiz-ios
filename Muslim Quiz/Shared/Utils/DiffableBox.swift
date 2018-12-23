@@ -32,8 +32,7 @@ public protocol Diffable {
      @return `YES` if the receiver and object are equal, otherwise `NO`.
      */
     func isEqual(toDiffableObject object: Diffable?) -> Bool
-    
-    func diffable() -> DiffableBox
+
 }
 
 extension Diffable {

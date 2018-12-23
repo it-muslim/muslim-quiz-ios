@@ -33,6 +33,7 @@
 		FC52A010217CBCFF00886C76 /* QuizConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC52A00F217CBCFF00886C76 /* QuizConfigurator.swift */; };
 		FC52A016217CC0EF00886C76 /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC52A015217CC0EF00886C76 /* NotificationHandler.swift */; };
 		FC52A018217CC7FA00886C76 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC52A017217CC7FA00886C76 /* GoogleService-Info.plist */; };
+		FC591FAF21D01CA000F4866C /* GameUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC591FAE21D01CA000F4866C /* GameUserInfo.swift */; };
 		FC6D8A7021C5581A00987D14 /* RoundPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6D8A6B21C5581A00987D14 /* RoundPresenter.swift */; };
 		FC6D8A7121C5581A00987D14 /* RoundRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6D8A6C21C5581A00987D14 /* RoundRouter.swift */; };
 		FC6D8A7221C5581A00987D14 /* RoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6D8A6D21C5581A00987D14 /* RoundViewController.swift */; };
@@ -144,6 +145,7 @@
 		FC52A00F217CBCFF00886C76 /* QuizConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizConfigurator.swift; sourceTree = "<group>"; };
 		FC52A015217CC0EF00886C76 /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
 		FC52A017217CC7FA00886C76 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FC591FAE21D01CA000F4866C /* GameUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameUserInfo.swift; sourceTree = "<group>"; };
 		FC6D8A6B21C5581A00987D14 /* RoundPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundPresenter.swift; sourceTree = "<group>"; };
 		FC6D8A6C21C5581A00987D14 /* RoundRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundRouter.swift; sourceTree = "<group>"; };
 		FC6D8A6D21C5581A00987D14 /* RoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundViewController.swift; sourceTree = "<group>"; };
@@ -325,6 +327,7 @@
 				FCE1931021CFF99A00E0D663 /* Question.swift */,
 				FCE1931421CFF9D100E0D663 /* Answer.swift */,
 				FC4675DF21CFCCA700B8B4B1 /* Game.swift */,
+				FC591FAE21D01CA000F4866C /* GameUserInfo.swift */,
 				FCE1931621CFFB9D00E0D663 /* Round.swift */,
 				FCE1930C21CFF98D00E0D663 /* RoundUserInfo.swift */,
 			);
@@ -851,10 +854,10 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 				"${BUILT_PRODUCTS_DIR}/VK-ios-sdk/VK_ios_sdk.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -873,10 +876,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VK_ios_sdk.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -946,6 +949,7 @@
 				FCB8766E21BBCA9400A8284D /* ViewController.swift in Sources */,
 				FC6D8A7E21C55D4B00987D14 /* RoundAnswerCell.swift in Sources */,
 				FCE1930D21CFF98D00E0D663 /* RoundUserInfo.swift in Sources */,
+				FC591FAF21D01CA000F4866C /* GameUserInfo.swift in Sources */,
 				FC52A010217CBCFF00886C76 /* QuizConfigurator.swift in Sources */,
 				FCEE09BC21CE8FBC00C2FF64 /* RootRouter.swift in Sources */,
 				FCAF937721BD3EB300E41CC1 /* GameRouter.swift in Sources */,

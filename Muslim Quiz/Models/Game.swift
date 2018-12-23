@@ -6,14 +6,12 @@
 //  Copyright © 2018 Amin Benarieb. All rights reserved.
 //
 
-import SwiftyJSON
+import ObjectMapper
 
 struct Game {
     struct Summary {
-        typealias UserGameInfo = (user: User, score: Int)
         let identifier: String
-        let userInfo: UserGameInfo
-        let partnerInfo: UserGameInfo
+        let userInfos: [GameUserInfo]
     }
     struct Status {
         enum Status: Equatable {
@@ -27,33 +25,31 @@ struct Game {
         let status: Status
     }
     
-    var identifier: String!
-    var user: User!
-    var partner: User!
-    var rounds: [Round]!
-    var startDate: Date?
-    var endDate: Date?
-    var status: Status
+    let identifier: String
+    let userInfos: [GameUserInfo]
+    let rounds: [Round]
+    let startDate: Date?
+    let endDate: Date?
+    let status: Status
     
     var summary: Summary {
-        let userScore = self.rounds.reduce(0) { (result, round) -> Int in
-            return result + round.roundUserInfo.score
-        }
-        let partnerScore = self.rounds.reduce(0) { (result, round) -> Int in
-            return result + round.roundPartnerInfo.score
-        }
         return Summary(identifier: self.identifier,
-                       userInfo: (user: self.user, score: userScore),
-                       partnerInfo: (user: self.partner, score: partnerScore))
+                       userInfos: self.userInfos)
     }
 }
 
 // JSON Decoding
 
-extension Game {
+extension Game: ImmutableMappable {
     
-    init(dict: [String: AnyObject]) {
+    init(map: Map) throws {
         
+        self.identifier = try map.value("identifier")
+        self.userInfos = try map.value("users") //
+        self.rounds = try map.value("rounds") //
+        self.startDate = try? map.value("startDate", using: DateTransform()) //
+        self.endDate = try? map.value("endDate", using: DateTransform()) //
+        self.status = try map.value("status") //
     }
     
 }
@@ -68,8 +64,7 @@ extension Game: Diffable, Equatable {
     
     static func == (lhs: Game, rhs: Game) -> Bool {
         return lhs.identifier == rhs.identifier &&
-            lhs.user == rhs.user &&
-            lhs.partner == rhs.partner &&
+            lhs.userInfos == rhs.userInfos &&
             lhs.rounds == rhs.rounds &&
             lhs.startDate == rhs.startDate &&
             lhs.endDate == rhs.endDate
@@ -88,8 +83,7 @@ extension Game.Summary: Diffable, Equatable {
     }
     
     static func == (lhs: Game.Summary, rhs: Game.Summary) -> Bool {
-        return lhs.identifier == rhs.identifier && lhs.userInfo == rhs.userInfo &&
-            lhs.partnerInfo == rhs.partnerInfo;
+        return lhs.identifier == rhs.identifier && lhs.userInfos == rhs.userInfos;
     }
     
     func isEqual(toDiffableObject object: Diffable?) -> Bool {

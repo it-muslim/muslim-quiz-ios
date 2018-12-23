@@ -35,7 +35,7 @@ class GameSectionController: ListSectionController {
                                                                     for: self,
                                                                     at: index) as! GameCell
         let game = self.gameSection.games[index]
-        gameCell.configure(partnerName: game.partner.name)
+        gameCell.configure(partnerName: game.userInfos[1].user.name)
         return gameCell
     }
     

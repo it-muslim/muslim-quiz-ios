@@ -25,33 +25,7 @@ class HomePresenter : Presenter, HomePresenterProtocol {
     private var databaseRef: DatabaseReference! = Database.database().reference() //TODO: Inject and wrap?
     
     override func viewDidLoad() {
-        self.databaseRef.child("games").observe(DataEventType.value,
-                                                with:
-            { (snapshot) in
-                let gameJSONs = snapshot.value as? [String : AnyObject] ?? [:]
-                gameJSONs.map({ (<#(key: String, value: AnyObject)#>) -> T in
-                    <#code#>
-                })
-        }) { (error) in
-            
-        }
-        // 1. get games
-        // 2. split by status into section
-        var games = [Game]()
-//        Game(identifier: "\(i)",
-//            user: User(identifier: "user\(i)",
-//                name: "Амин \(i)",
-//                level: "Студент \(i)",
-//                score: 10*i),
-//            partner: User(identifier: "user\(i)",
-//                name: "Амин \(i)",
-//                level: "Ученик \(i)",
-//                score: 11*i),
-//            startDate: Date(),
-//            rounds: rounds)
-//        GameSection(title: "Секция \(i)", games: games)
-        var gameSections = [GameSection]()
-        self.view.configure(listObjects: gameSections)
+        self.loadData()
     }
     
     func startGameRequested() {
@@ -69,6 +43,41 @@ class HomePresenter : Presenter, HomePresenterProtocol {
             self.view.showError(msg: signOutError.localizedDescription)
         }
         
+    }
+    
+    // MARK: Private
+    
+    private func loadData() {
+        self.databaseRef.child("games")
+            .observeSingleEvent(of: .value,
+                                with:
+                { [weak self] (snapshot) in
+                    //TODO: Stop point
+                    let gameJSONs = snapshot.value as? [[String : AnyObject]] ?? [[String : AnyObject]]()
+                    let games = gameJSONs.map({ (gameJSON) -> Game? in
+                        return Game(JSON: gameJSON)
+                    })
+                    
+
+                    var gameSections = [GameSection]()
+                    self?.view.configure(listObjects: gameSections)
+            }, withCancel: { [weak self] (error) in
+                self?.view.showError(msg: error.localizedDescription)
+            })
+            
+//            .observe(DataEventType.value,
+//                                                with:
+//            { [weak self] (snapshot) in
+//                let gameJSONs = snapshot.value as? [[String : AnyObject]] ?? [[String : AnyObject]]()
+//                let games = gameJSONs.map({ (gameJSON) -> Game? in
+//                    return Game(JSON: gameJSON)
+//                })
+//
+//                var gameSections = [GameSection]()
+//                self?.view.configure(listObjects: gameSections)
+//        }) { [weak self] (error) in
+//            self?.view.showError(msg: error)
+//        }
     }
     
 }
