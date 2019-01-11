@@ -28,9 +28,13 @@ class GamePresenter : Presenter, GamePresenterProtocol {
     }
     
     override func viewDidLoad() {
-        let items = [self.game.summary,
-                     self.game.rounds,
-                     self.game.status] as! [Diffable]
+        var items = [Diffable]()
+        items.append(self.game.summary)
+        if self.game.rounds.count != 0 {
+            items.append(contentsOf: self.game.rounds)
+        }
+        items.append(self.game.status)
+        
         self.view.configure(items: items.map{ $0.diffable() } )
     }
     

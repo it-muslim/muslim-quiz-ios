@@ -35,7 +35,7 @@ class UserSectionController: ListSectionController {
     
     override func didUpdate(to object: Any) {
         self.collectionContext!.performBatch(animated: true, updates: { (listBatchContext) in
-            self.user = object as! User
+            self.user = (object as! DiffableBox).value as! User
         }, completion: nil)
     }
     

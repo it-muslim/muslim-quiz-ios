@@ -53,6 +53,7 @@ extension UsersViewController: UsersView {
     
     func configure(listObjects: [ListDiffable]) {
         self.adapterDataSource.listObjects = listObjects
+        self.adapter.performUpdates(animated: true, completion: nil)
     }
 
 }

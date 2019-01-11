@@ -30,7 +30,6 @@
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJK-BE-Mbv">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
-                    <state key="normal" title="Button"/>
                     <connections>
                         <action selector="toggleCollapse:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="Opi-0q-ytC"/>
                     </connections>

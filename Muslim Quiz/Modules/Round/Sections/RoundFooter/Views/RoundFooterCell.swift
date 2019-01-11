@@ -40,19 +40,17 @@ class RoundFooterCell: UICollectionViewCell {
         return 100
     }
     
-    func configure(roundStatus: Round.Status) {
+    func configure(roundStatus: RoundStatus) {
         self.stackView.subviews.forEach { (button) in
             self.stackView.removeArrangedSubview(button)
         }
         switch roundStatus.status {
-        case .inProgress:
+        case .playing:
             self.stackView.addArrangedSubview(self.buttonSkip)
             self.stackView.addArrangedSubview(self.buttonReport)
             break
         case .waiting: fallthrough
-        case .finished(_): fallthrough
-        case .expired(_): fallthrough
-        case .givedUp(_):
+        case .finished: 
             self.stackView.addArrangedSubview(self.buttonReport)
             break
         }

@@ -10,9 +10,9 @@ import IGListKit
 
 class RoundFooterSectionController: ListSectionController {
     
-    private let roundStatus : Round.Status
+    private let roundStatus : RoundStatus
     
-    init(status: Round.Status) {
+    init(status: RoundStatus) {
         self.roundStatus = status
         super.init()
     }

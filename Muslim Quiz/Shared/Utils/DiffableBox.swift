@@ -47,9 +47,11 @@ extension Diffable {
 public final class DiffableBox: ListDiffable {
     
     let value: Diffable
+    let type : Any.Type
     
     init(value: Diffable) {
         self.value = value
+        self.type = Mirror(reflecting: value).subjectType
     }
     
     // ListDiffable

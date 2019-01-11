@@ -27,6 +27,7 @@ class UsersAssembly: UsersAssemblyProtocol {
             let viewController = UsersViewController()
             viewController.presenter = r.resolve(UsersPresenterProtocol.self)!
             viewController.adapterDataSource = self.serviceAssembly?.getService()
+            viewController.dialogFactory = r.resolve(DialogFactoryProtocol.self)!
             return viewController
         }
         container.register(UsersPresenterProtocol.self) { r in UsersPresenter() }

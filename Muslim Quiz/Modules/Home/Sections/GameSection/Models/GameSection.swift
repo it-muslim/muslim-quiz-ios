@@ -8,34 +8,30 @@
 
 import IGListKit.IGListDiffable
 
-class GameSection: Equatable {
+struct GameSection {
     let title: String
     let games: [Game]
-    var collapsed: Bool
-    
-    init(title: String, games: [Game], collapsed: Bool = false) {
-        self.title = title
-        self.games = games
-        self.collapsed = collapsed
-    }
+    var collapsed: Bool = false
+}
+
+extension GameSection: Equatable {
     
     static func == (lhs: GameSection, rhs: GameSection) -> Bool {
-        return lhs.games == lhs.games
+        return lhs.title == lhs.title && lhs.games == lhs.games
     }
     
 }
 
 
-extension GameSection: ListDiffable {
+extension GameSection: Diffable {
     
-    func diffIdentifier() -> NSObjectProtocol {
-        return self.title as NSObjectProtocol
+    var diffIdentifier: String {
+        return self.title
     }
     
-    func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
-        guard self !== object else { return true }
-        guard let game = object as? GameSection else { return false }
-        return self == game
+    func isEqual(toDiffableObject object: Diffable?) -> Bool {
+        guard let gameSection = object as? GameSection else { return false }
+        return self == gameSection
     }
     
 }

@@ -89,6 +89,11 @@
 		FCBAF8A721BC1E9F00A596E3 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBAF8A221BC1E9F00A596E3 /* StartViewController.swift */; };
 		FCBAF8A821BC1E9F00A596E3 /* StartAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBAF8A321BC1E9F00A596E3 /* StartAssembly.swift */; };
 		FCBAF8A921BC1E9F00A596E3 /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCBAF8A421BC1E9F00A596E3 /* StartViewController.xib */; };
+		FCCD876E21E2565A0086C030 /* GameStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCD876D21E2565A0086C030 /* GameStatus.swift */; };
+		FCCD877021E256750086C030 /* GameSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCD876F21E256750086C030 /* GameSummary.swift */; };
+		FCCD877321E25AB80086C030 /* RoundStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCD877221E25AB80086C030 /* RoundStatus.swift */; };
+		FCCD877521E25AFC0086C030 /* RoundSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCD877421E25AFC0086C030 /* RoundSummary.swift */; };
+		FCCD877C21E271CE0086C030 /* DiffResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCD877B21E271CE0086C030 /* DiffResult.swift */; };
 		FCE1930A21CFF7BA00E0D663 /* DiffableBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE1930921CFF7BA00E0D663 /* DiffableBox.swift */; };
 		FCE1930D21CFF98D00E0D663 /* RoundUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE1930C21CFF98D00E0D663 /* RoundUserInfo.swift */; };
 		FCE1930F21CFF99500E0D663 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE1930E21CFF99500E0D663 /* Topic.swift */; };
@@ -205,6 +210,11 @@
 		FCBAF8A221BC1E9F00A596E3 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		FCBAF8A321BC1E9F00A596E3 /* StartAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartAssembly.swift; sourceTree = "<group>"; };
 		FCBAF8A421BC1E9F00A596E3 /* StartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartViewController.xib; sourceTree = "<group>"; };
+		FCCD876D21E2565A0086C030 /* GameStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStatus.swift; sourceTree = "<group>"; };
+		FCCD876F21E256750086C030 /* GameSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSummary.swift; sourceTree = "<group>"; };
+		FCCD877221E25AB80086C030 /* RoundStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundStatus.swift; sourceTree = "<group>"; };
+		FCCD877421E25AFC0086C030 /* RoundSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundSummary.swift; sourceTree = "<group>"; };
+		FCCD877B21E271CE0086C030 /* DiffResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffResult.swift; sourceTree = "<group>"; };
 		FCE1930921CFF7BA00E0D663 /* DiffableBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiffableBox.swift; sourceTree = "<group>"; };
 		FCE1930C21CFF98D00E0D663 /* RoundUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundUserInfo.swift; sourceTree = "<group>"; };
 		FCE1930E21CFF99500E0D663 /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
@@ -326,10 +336,8 @@
 				FCE1930E21CFF99500E0D663 /* Topic.swift */,
 				FCE1931021CFF99A00E0D663 /* Question.swift */,
 				FCE1931421CFF9D100E0D663 /* Answer.swift */,
-				FC4675DF21CFCCA700B8B4B1 /* Game.swift */,
-				FC591FAE21D01CA000F4866C /* GameUserInfo.swift */,
-				FCE1931621CFFB9D00E0D663 /* Round.swift */,
-				FCE1930C21CFF98D00E0D663 /* RoundUserInfo.swift */,
+				FCCD876C21E2564D0086C030 /* Game */,
+				FCCD877121E25A950086C030 /* Round */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -551,6 +559,7 @@
 			isa = PBXGroup;
 			children = (
 				FCE1930921CFF7BA00E0D663 /* DiffableBox.swift */,
+				FCCD877B21E271CE0086C030 /* DiffResult.swift */,
 				FCAF935121BC9DB100E41CC1 /* NibLoadable.swift */,
 				FCAF939C21BD822A00E41CC1 /* UIImage.swift */,
 			);
@@ -654,6 +663,28 @@
 				FC3BE00121BC2BF5002ADF7F /* SectionSourceService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		FCCD876C21E2564D0086C030 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				FC4675DF21CFCCA700B8B4B1 /* Game.swift */,
+				FCCD876F21E256750086C030 /* GameSummary.swift */,
+				FCCD876D21E2565A0086C030 /* GameStatus.swift */,
+				FC591FAE21D01CA000F4866C /* GameUserInfo.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		FCCD877121E25A950086C030 /* Round */ = {
+			isa = PBXGroup;
+			children = (
+				FCE1931621CFFB9D00E0D663 /* Round.swift */,
+				FCCD877421E25AFC0086C030 /* RoundSummary.swift */,
+				FCCD877221E25AB80086C030 /* RoundStatus.swift */,
+				FCE1930C21CFF98D00E0D663 /* RoundUserInfo.swift */,
+			);
+			path = Round;
 			sourceTree = "<group>";
 		};
 		FCEE09B521CE8FA200C2FF64 /* Root */ = {
@@ -905,6 +936,7 @@
 				FC52A00E217CBCF700886C76 /* DeeplinkHandler.swift in Sources */,
 				FCAF939321BD589E00E41CC1 /* GameHeaderSectionController.swift in Sources */,
 				FCE1931521CFF9D100E0D663 /* Answer.swift in Sources */,
+				FCCD877321E25AB80086C030 /* RoundStatus.swift in Sources */,
 				FC6D8A7321C5581A00987D14 /* RoundAssembly.swift in Sources */,
 				FC6D8A8621C55DD900987D14 /* RoundProgressCell.swift in Sources */,
 				FCE1931121CFF99A00E0D663 /* Question.swift in Sources */,
@@ -914,7 +946,10 @@
 				FC3BDFE721BC20A6002ADF7F /* HomeViewController.swift in Sources */,
 				FCAF939D21BD822A00E41CC1 /* UIImage.swift in Sources */,
 				FC3BDFF121BC223D002ADF7F /* GamesHeaderView.swift in Sources */,
+				FCCD876E21E2565A0086C030 /* GameStatus.swift in Sources */,
 				FC6D8A8221C55D6700987D14 /* RoundQuestionCell.swift in Sources */,
+				FCCD877521E25AFC0086C030 /* RoundSummary.swift in Sources */,
+				FCCD877021E256750086C030 /* GameSummary.swift in Sources */,
 				FCAF934821BC8B4100E41CC1 /* UserCell.swift in Sources */,
 				FC26EEE821C5A4BC00D5B23F /* RoundFooterCell.swift in Sources */,
 				FC3BDFE521BC20A6002ADF7F /* HomePresenter.swift in Sources */,
@@ -936,6 +971,7 @@
 				FCAF938621BD3EB900E41CC1 /* RoundResultView.swift in Sources */,
 				FCAF934E21BC8D3A00E41CC1 /* AvatarView.swift in Sources */,
 				FCAF934121BC8B1100E41CC1 /* UsersViewController.swift in Sources */,
+				FCCD877C21E271CE0086C030 /* DiffResult.swift in Sources */,
 				FCAF935221BC9DB100E41CC1 /* NibLoadable.swift in Sources */,
 				FCAF937921BD3EB300E41CC1 /* GameAssembly.swift in Sources */,
 				FC3BDFFB21BC28D8002ADF7F /* GameSectionController.swift in Sources */,

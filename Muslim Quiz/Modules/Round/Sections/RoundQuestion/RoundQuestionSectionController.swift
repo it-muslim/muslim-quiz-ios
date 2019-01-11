@@ -66,7 +66,7 @@ class RoundQuestionSectionController: ListSectionController {
     
     override func didUpdate(to object: Any) {
         self.collectionContext!.performBatch(animated: true, updates: { (listBatchContext) in
-            self.question = object as! Question
+            self.question = (object as! DiffableBox).value as! Question
         }, completion: nil)
     }
     

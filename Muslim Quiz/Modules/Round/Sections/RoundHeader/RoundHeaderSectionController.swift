@@ -10,8 +10,8 @@ import IGListKit
 
 class RoundHeaderSectionController: ListSectionController {
     
-    var roundSummary : Round.RoundSummary
-    init(roundSummary: Round.RoundSummary) {
+    var roundSummary : RoundSummary
+    init(roundSummary: RoundSummary) {
         self.roundSummary = roundSummary
         super.init()
     }
@@ -40,7 +40,7 @@ class RoundHeaderSectionController: ListSectionController {
     
     override func didUpdate(to object: Any) {
         self.collectionContext!.performBatch(animated: true, updates: { (listBatchContext) in
-            self.roundSummary = object as! Round.RoundSummary
+            self.roundSummary = (object as! DiffableBox).value as! RoundSummary
         }, completion: nil)
     }
     

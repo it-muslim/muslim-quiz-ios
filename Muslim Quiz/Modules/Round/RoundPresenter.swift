@@ -28,9 +28,12 @@ class RoundPresenter : Presenter, RoundPresenterProtocol {
     }
     
     override func viewDidLoad() {
-        var items = [self.round.roundSummary(questionIndex: currentQuestionIdx),
+        //TODO: Add roundIndex
+        let items = [self.round.roundSummary(roundIndex: 0,
+                                             questionIndex: currentQuestionIdx),
                      self.round.topic.questions[self.currentQuestionIdx],
-                     self.round.status] as [Any]
+                     self.round.status] as! [ListDiffable]
+        self.view.configure(listObjects: items)
         
     }
     

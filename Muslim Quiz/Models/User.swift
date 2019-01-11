@@ -6,28 +6,44 @@
 //  Copyright © 2018 Amin Benarieb. All rights reserved.
 //
 
-import Foundation
+import ObjectMapper
 
-struct User {
+struct User: Equatable {
     let identifier: String
-    let name: String
+    let name: String?
+    let email: String
     let avatarUrl: String?
     let online: Bool?
     let level: String
     let score: Int
+    
+    var fullName: String {
+        return self.name ?? self.email
+    }
 }
 
-extension User: Diffable, Equatable {
-    var diffIdentifier: String {
-        return self.identifier
+
+// MARK: JSON Decoding
+
+extension User: ImmutableMappable {
+    
+    init(map: Map) throws {
+        self.identifier = try map.value("identifier")
+        self.name = try? map.value("name")
+        self.email = try map.value("email")
+        self.avatarUrl = try? map.value("avatarUrl")
+        self.online = try? map.value("online")
+        self.level = try map.value("level")
+        self.score = try map.value("score")
     }
     
-    static func == (lhs: User, rhs: User) -> Bool {
-        return lhs.name == rhs.name &&
-            lhs.avatarUrl == rhs.avatarUrl &&
-            lhs.online == rhs.online &&
-            lhs.level == rhs.level &&
-            lhs.score == rhs.score;
+}
+
+// MARK: Diffable
+
+extension User: Diffable {
+    var diffIdentifier: String {
+        return self.identifier
     }
     
     func isEqual(toDiffableObject object: Diffable?) -> Bool {

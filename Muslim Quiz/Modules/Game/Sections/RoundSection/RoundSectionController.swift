@@ -7,10 +7,11 @@
 //
 
 import IGListKit
+import Firebase
 
 class RoundSectionController: ListSectionController {
     
-    var round : Round
+    private var round : Round
     init(round: Round) {
         self.round = round
     }
@@ -35,7 +36,7 @@ class RoundSectionController: ListSectionController {
     
     override func didUpdate(to object: Any) {
         self.collectionContext!.performBatch(animated: true, updates: { (listBatchContext) in
-            self.round = object as! Round
+            self.round = (object as! DiffableBox).value as! Round
         }, completion: nil)
     }
     

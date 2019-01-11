@@ -35,12 +35,17 @@ class RoundResultView: UIView, NibLoadable {
             self.stackView.removeArrangedSubview(view)
         }
         switch roundUserInfo?.status {
-        case .some(.text(let status)):
+        case .some(.timeOver):
             let textLabel = UILabel()
-            textLabel.text = status
+            textLabel.text = "Время вышло"
             self.stackView.addArrangedSubview(textLabel)
             break
-        case .some(.answers(let answers)):
+        case .some(.giveUp):
+            let textLabel = UILabel()
+            textLabel.text = "Сдался"
+            self.stackView.addArrangedSubview(textLabel)
+            break
+        case .some(.finished(let answers)):
             for answer in answers {
                 let view = UIView()
                 view.backgroundColor = answer ? .green : .red

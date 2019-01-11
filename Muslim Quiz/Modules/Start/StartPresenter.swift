@@ -56,38 +56,45 @@ class StartPresenter : Presenter, StartPresenterProtocol {
         self.auth.createUser(withEmail: email,
                                password: password)
         { [weak self] (auth, error) in
-            defer {
-                self?.view.stopLoading()
-            }
-            
-            if let error = error as NSError? {
-                guard error.code != AuthErrorCode.emailAlreadyInUse.rawValue else {
-                    self?.signIn(email: email, password: password)
-                    return
-                }
-                self?.processError(error: error)
-                return
-            }
-            
-            self?.databaseRef.child("users")
-            self?.router.openHome()
+            self?.processAuth(email, password, auth, error)
         }
     }
     
     private func signIn(email: String, password: String) {
         self.view.startLoading()
         self.auth.signIn(withEmail: email, password: password) { [weak self] (auth, error) in
-            defer {
-                self?.view.stopLoading()
-            }
-            
-            if let error = error as NSError? {
-                self?.processError(error: error)
+            self?.processAuth(email, password, auth, error)
+        }
+    }
+    
+    private func processAuth(_ email: String,
+                             _ password : String,
+                             _ auth : AuthDataResult?,
+                             _ error: Error?)  {
+        defer {
+            self.view.stopLoading()
+        }
+        
+        if let error = error as NSError? {
+            guard error.code != AuthErrorCode.emailAlreadyInUse.rawValue else {
+                self.signIn(email: email, password: password)
                 return
             }
-            
-            self?.router.openHome()
+            self.processError(error: error)
+            return
         }
+        
+        guard let user = auth?.user else {
+            self.view.showError(msg: "Авторизация прошла, но потом что-то то пошло не так...")
+            return
+        }
+        
+        self.databaseRef.child("users/\(user.uid)").setValue([
+            "email" : email,
+            "level" : Config.initialLevel,
+            "score" : Config.initialScore
+            ])
+        self.router.openHome()
     }
     
     private func processError(error: Error) {

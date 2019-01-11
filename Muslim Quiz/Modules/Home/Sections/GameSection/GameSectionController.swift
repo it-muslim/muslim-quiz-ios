@@ -35,7 +35,7 @@ class GameSectionController: ListSectionController {
                                                                     for: self,
                                                                     at: index) as! GameCell
         let game = self.gameSection.games[index]
-        gameCell.configure(partnerName: game.userInfos[1].user.name)
+        gameCell.configure(partnerName: game.identifier)
         return gameCell
     }
     
@@ -46,7 +46,20 @@ class GameSectionController: ListSectionController {
     
     override func didUpdate(to object: Any) {
         self.collectionContext!.performBatch(animated: true, updates: { (listBatchContext) in
-            self.gameSection = object as! GameSection
+            let newGameSection = (object as! DiffableBox).value as! GameSection
+            let old = self.gameSection.games.map { DiffableBox(value: $0) }
+            let new = newGameSection.games.map { DiffableBox(value: $0) }
+            let diff = ListDiff(oldArray: old,
+                                  newArray: new,
+                                  option: .equality)
+            listBatchContext.insert(in: self, at: diff.inserts)
+            listBatchContext.delete(in: self, at: diff.deletes)
+            listBatchContext.reload(in: self, at: diff.updates)
+            diff.moves.forEach({ (moveIndex) in
+                listBatchContext.move(in: self, from: moveIndex.from, to: moveIndex.to)
+            })
+            
+            self.gameSection = newGameSection
         }, completion: nil)
     }
     

@@ -10,8 +10,8 @@ import IGListKit
 
 class GameFooterSectionController: ListSectionController {
     
-    var gameStatus : Game.Status
-    init(gameStatus: Game.Status) {
+    var gameStatus : GameStatus
+    init(gameStatus: GameStatus) {
         self.gameStatus = gameStatus
         super.init()
         self.inset = UIEdgeInsets(top: 0,
@@ -41,7 +41,7 @@ class GameFooterSectionController: ListSectionController {
     
     override func didUpdate(to object: Any) {
         self.collectionContext!.performBatch(animated: true, updates: { (listBatchContext) in
-            self.gameStatus = object as! Game.Status
+            self.gameStatus = (object as! DiffableBox).value as! GameStatus
         }, completion: nil)
     }
     

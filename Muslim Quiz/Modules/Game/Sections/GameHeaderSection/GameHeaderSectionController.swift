@@ -10,8 +10,8 @@ import IGListKit
 
 class GameHeaderSectionController: ListSectionController {
     
-    var gameSummary : Game.Summary
-    init(gameSummary: Game.Summary) {
+    var gameSummary : GameSummary
+    init(gameSummary: GameSummary) {
         self.gameSummary = gameSummary
         super.init()
     }
@@ -36,7 +36,7 @@ class GameHeaderSectionController: ListSectionController {
     
     override func didUpdate(to object: Any) {
         self.collectionContext!.performBatch(animated: true, updates: { (listBatchContext) in
-            self.gameSummary = object as! Game.Summary
+            self.gameSummary = (object as! DiffableBox).value as! GameSummary
         }, completion: nil)
     }
     

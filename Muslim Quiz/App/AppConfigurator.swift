@@ -10,6 +10,12 @@ import UIKit
 import Firebase
 import Swinject
 
+// TODO: Make it initiated from plist.list or configurable from server
+class Config {
+    static let initialLevel = ""
+    static let initialScore = 100
+}
+
 protocol AppConfiguratorProtocol {
 
     func initialSetupApplication(_ application: UIApplication,

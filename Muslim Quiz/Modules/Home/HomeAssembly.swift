@@ -33,6 +33,7 @@ class HomeAssembly: HomeAssemblyProtocol {
             let viewController = HomeViewController()
             viewController.presenter = r.resolve(HomePresenterProtocol.self)!
             viewController.adapterDataSource = self.serviceAssembly?.getService()
+            viewController.dialogFactory = r.resolve(DialogFactoryProtocol.self)!
             return viewController
         }
         self.container.register(HomePresenterProtocol.self) { r in HomePresenter() }

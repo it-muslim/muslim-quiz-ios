@@ -27,7 +27,7 @@ class RoundHeaderCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     weak var delegate : RoundHeaderDelegate?
     
-    static func height(for roundSummary: Round.RoundSummary,
+    static func height(for roundSummary: RoundSummary,
                        with width: CGFloat) -> CGFloat {
         let attirbutedTitle = RoundHeaderCell.attirbutedTitle(text: roundSummary.title)
         let width = width - RoundHeaderTitleInset.left - RoundHeaderTitleInset.right
@@ -47,7 +47,7 @@ class RoundHeaderCell: UICollectionViewCell {
         // Initialization code
     }
     
-    func configure(roundSummary: Round.RoundSummary) {
+    func configure(roundSummary: RoundSummary) {
         self.pageControl.numberOfPages = roundSummary.questionCount
         self.pageControl.currentPage = roundSummary.questionIndex
         self.titleLabel.attributedText = RoundHeaderCell.attirbutedTitle(text: roundSummary.title)

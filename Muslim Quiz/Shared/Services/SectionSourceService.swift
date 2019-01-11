@@ -15,7 +15,7 @@ protocol SectionSourceServiceProtocol: ListAdapterDataSource{
 
 class SectionSourceService: NSObject, SectionSourceServiceProtocol {
     
-    var listObjects: [ListDiffable]
+    var listObjects: [ListDiffable] 
     
     init(listObjects: [ListDiffable] = [ListDiffable]()) {
         self.listObjects = listObjects
@@ -27,26 +27,30 @@ class SectionSourceService: NSObject, SectionSourceServiceProtocol {
     
     func listAdapter(_ listAdapter: ListAdapter,
                      sectionControllerFor object: Any) -> ListSectionController {
-        switch object {
-        case let gameSection as GameSection:
-            return GameSectionController(gameSection: gameSection)
-        case let user as User:
-            return UserSectionController(user: user)
-        case let round as Round:
-            return RoundSectionController(round: round)
-        case let gameSummary as Game.Summary:
-            return GameHeaderSectionController(gameSummary: gameSummary)
-        case let gameStatus as Game.Status:
-            return GameFooterSectionController(gameStatus: gameStatus)
-        case let roundSummary as Round.RoundSummary:
-            return RoundHeaderSectionController(roundSummary: roundSummary)
-        case let question as Question:
-            return RoundQuestionSectionController(question: question)
-        case let roundStatus as Round.Status:
-            return RoundFooterSectionController(status: roundStatus)
-        default:
-            fatalError("No ListSectionController provided for \(type(of: object))")
+        if let diffableBox = object as? DiffableBox {
+            switch diffableBox.value {
+            case let gameSection as GameSection:
+                return GameSectionController(gameSection: gameSection)
+            case let user as User:
+                return UserSectionController(user: user)
+            case let round as Round:
+                return RoundSectionController(round: round)
+            case let gameSummary as GameSummary:
+                return GameHeaderSectionController(gameSummary: gameSummary)
+            case let gameStatus as GameStatus:
+                return GameFooterSectionController(gameStatus: gameStatus)
+            case let roundSummary as RoundSummary:
+                return RoundHeaderSectionController(roundSummary: roundSummary)
+            case let question as Question:
+                return RoundQuestionSectionController(question: question)
+            case let roundStatus as RoundStatus:
+                return RoundFooterSectionController(status: roundStatus)
+            default:
+                fatalError("No ListSectionController provided for diffable box value \(type(of: object))")
+            }
         }
+        
+        fatalError("No ListSectionController provided for \(type(of: object))")
     }
     
     func emptyView(for listAdapter: ListAdapter) -> UIView? {

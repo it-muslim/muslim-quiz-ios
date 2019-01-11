@@ -23,10 +23,15 @@ class RoundCell: UICollectionViewCell {
     }
     
     func configure(number:Int, round: Round) {
-        self.titleLabel.text = "Рвунд \(round)"
+        self.titleLabel.text = "Раунд \(round)"
         self.topicLabel.text = round.topic.name
-        self.userRoundUserView.configure(roundUserInfo: round.roundUserInfo)
-        self.partnerRoundUserView.configure(roundUserInfo: round.roundPartnerInfo)
+        
+        let currentUserInfo = round.userInfos.filter { $0.user == round.currentUser }.first
+        self.userRoundUserView.configure(roundUserInfo: currentUserInfo)
+        
+        //TODO: Make UI to show all partners
+        let partnerUserInfo = round.userInfos.filter { $0.user != round.currentUser }.first
+        self.partnerRoundUserView.configure(roundUserInfo: partnerUserInfo)
     }
 
     //MARK: Private

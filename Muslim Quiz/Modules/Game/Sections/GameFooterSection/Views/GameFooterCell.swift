@@ -46,7 +46,7 @@ class GameFooterCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
-    func configure(gameStatus: Game.Status) {
+    func configure(gameStatus: GameStatus) {
         self.stackView.subviews.forEach { (button) in
             self.stackView.removeArrangedSubview(button)
         }
@@ -54,12 +54,12 @@ class GameFooterCell: UICollectionViewCell {
         case .waiting:
             self.stackView.addArrangedSubview(self.buttonGiveUp)
             break
-        case .inProgress:
+        case .playing:
             self.stackView.addArrangedSubview(self.buttonPlay)
             self.stackView.addArrangedSubview(self.buttonGiveUp)
             break
-        case .giveUp(_): fallthrough
-        case .finished(_):
+        case .rejected: fallthrough
+        case .finished:
             self.stackView.addArrangedSubview(self.buttonRematch)
             break
         }

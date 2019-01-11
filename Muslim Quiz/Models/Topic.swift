@@ -6,23 +6,39 @@
 //  Copyright © 2018 Amin Benarieb. All rights reserved.
 //
 
-import Foundation
+import ObjectMapper
 
-struct Topic {
+struct Topic: Equatable {
     let identifier: String
     let name: String
     let questions: [Question]
 }
 
-extension Topic: Diffable, Equatable {
+
+// MARK: ObjectMapper
+
+extension Topic: ImmutableMappable {
+    
+    init(map: Map) throws {
+        self.identifier = try map.value("identifier")
+        self.name = try map.value("name")
+        self.questions = {
+            do {
+                return try map.value("questions")
+            }
+            catch {
+                return  [Question]()
+            }
+        }()
+    }
+}
+
+// MARK: JSON Decoding
+
+extension Topic: Diffable {
+    
     var diffIdentifier: String {
         return self.identifier
-    }
-    
-    static func == (lhs: Topic, rhs: Topic) -> Bool {
-        return lhs.identifier == rhs.identifier &&
-            lhs.name == rhs.name &&
-            lhs.questions == rhs.questions;
     }
     
     func isEqual(toDiffableObject object: Diffable?) -> Bool {
