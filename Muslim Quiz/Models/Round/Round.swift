@@ -10,9 +10,8 @@ import ObjectMapper
 
 struct Round: Equatable {
     let identifier: String
-    let topic: Topic
-    let currentUser: User
-    let userInfos: [RoundUserInfo]
+    let topicId: String
+    let userInfos : [RoundUserInfo]
     let startDate: Date?
     let endDate: Date?
     let status: RoundStatus
@@ -25,9 +24,15 @@ struct Round: Equatable {
         }()
         return RoundSummary(identifier: self.identifier,
                             title: "Раунд \(roundIndex) против \(userNames)",
-            questionCount: self.topic.questions.count,
+            questionCount: self.topic?.questions.count ?? 0,
             questionIndex: questionIndex)
     }
+    
+    /// Required join
+    var topic: Topic?
+    /// Required join
+    var currentUser: User?
+    var index : Int?
 }
 
 // MARK: JSON Decoding
@@ -35,13 +40,12 @@ struct Round: Equatable {
 extension Round: ImmutableMappable {
     init(map: Map) throws {
         let identifier: String = try map.value("identifier")
-        let topic : Topic = try map.value("topic")
-        let currentUser : User = try map.value("currentUser")
+        let topicId : String = try map.value("topic")
         let userInfos: [RoundUserInfo] = {
-            guard let userJSONs = map.JSON["users"] as? [String : [String : Any]] else {
+            guard let userJSONs = map.JSON["userInfos"] as? [String : [String : Any]] else {
                 return [RoundUserInfo]()
             }
-
+            
             return userJSONs.compactMap {
                 let key = $0.key
                 var value = $0.value
@@ -58,8 +62,7 @@ extension Round: ImmutableMappable {
             }()
 
         self.identifier = identifier
-        self.topic = topic
-        self.currentUser = currentUser
+        self.topicId = topicId
         self.userInfos = userInfos
         self.startDate = startDate
         self.endDate = endDate

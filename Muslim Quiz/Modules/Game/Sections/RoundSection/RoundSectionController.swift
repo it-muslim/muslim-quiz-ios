@@ -25,7 +25,7 @@ class RoundSectionController: ListSectionController {
                                                                bundle: Bundle.main,
                                                                for: self,
                                                                at: index) as! RoundCell
-        cell.configure(number: self.section + 1, round: round)
+        cell.configure(number: self.section, round: round)
         return cell
     }
     

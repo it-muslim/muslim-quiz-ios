@@ -10,8 +10,8 @@ import ObjectMapper
 
 struct Game: Equatable {
     let identifier: String
-    let userInfos: [GameUserInfo]
-    let rounds: [Round]
+    var userInfos: [GameUserInfo]
+    let roundIds: [String]
     let startDate: Date?
     let endDate: Date?
     let status: GameStatus
@@ -20,6 +20,9 @@ struct Game: Equatable {
         return GameSummary(identifier: self.identifier,
                            userInfos: self.userInfos)
     }
+    
+    /// Requited join
+    var rounds = [Round]()
 }
 
 // MARK: JSON Decoding
@@ -40,12 +43,12 @@ extension Game: ImmutableMappable {
                 return GameUserInfo(JSON: value)
             }
         }()
-        let rounds: [Round] = {
+        let roundIds: [String] = {
             do {
                 return try map.value("rounds")
             }
             catch {
-                return  [Round]()
+                return  [String]()
             }
         }()
         let startDate: Date? = try? map.value("startDate", using: DateTransform())
@@ -59,7 +62,7 @@ extension Game: ImmutableMappable {
         
         self.identifier = identifier
         self.userInfos = userInfos
-        self.rounds = rounds
+        self.roundIds = roundIds
         self.startDate = startDate
         self.endDate = endDate
         self.status = status

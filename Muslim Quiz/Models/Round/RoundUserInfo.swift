@@ -18,6 +18,7 @@ struct RoundUserInfo: Equatable {
         case timeOver
     }
     
+    /// Required join
     var user: User?
     let status: Status?
     
@@ -28,11 +29,11 @@ struct RoundUserInfo: Equatable {
 extension RoundUserInfo: ImmutableMappable {
 
     init(map: Map) throws {
-        self.userId = try map.value("user")
+        self.userId = try map.value("identifier")
         self.score = try map.value("score")
         let giveUp: Bool? = try? map.value("giveup")
         let timeOver: Bool? = try? map.value("timeover")
-        let answers: [Bool] = try map.value("answers")
+        let answers: [Bool]? = try? map.value("answers")
         
         self.status = {
             if giveUp == true {
@@ -41,7 +42,7 @@ extension RoundUserInfo: ImmutableMappable {
             else if timeOver == true {
                 return .timeOver
             }
-            return .finished(answers)
+            return .finished(answers ?? [Bool]())
         }()
     }
 }

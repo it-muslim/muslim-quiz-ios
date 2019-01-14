@@ -23,8 +23,9 @@ class GameSummaryCell: UICollectionViewCell {
     }
 
     func configure(gameSummary: GameSummary) {
-//        self.userAvatarView.configure(user: gameSummary.userInfos[0].user)
-//        self.partnerAvatarView.configure(user: gameSummary.userInfos[1].user)        
+        // TODO: Add more that 2 users here
+        self.userAvatarView.configure(user: gameSummary.userInfos.first?.user)
+        self.partnerAvatarView.configure(user: gameSummary.userInfos.last?.user)
         self.scoreLabel.text = "\(gameSummary.userInfos[0].score) : \(gameSummary.userInfos[1].score)"
     }
     

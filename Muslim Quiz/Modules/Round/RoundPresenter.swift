@@ -28,12 +28,14 @@ class RoundPresenter : Presenter, RoundPresenterProtocol {
     }
     
     override func viewDidLoad() {
-        //TODO: Add roundIndex
-        let items = [self.round.roundSummary(roundIndex: 0,
-                                             questionIndex: currentQuestionIdx),
-                     self.round.topic.questions[self.currentQuestionIdx],
-                     self.round.status] as! [ListDiffable]
-        self.view.configure(listObjects: items)
+        var items = [Diffable]()
+        items.append(self.round.roundSummary(roundIndex: round.index ?? 0,
+                                             questionIndex: currentQuestionIdx))
+        if let topic = self.round.topic, topic.questions.count > self.currentQuestionIdx {
+            items.append(topic.questions[self.currentQuestionIdx])
+        }
+        items.append(self.round.status)
+        self.view.configure(listObjects: items.map { $0.diffable() } )
         
     }
     

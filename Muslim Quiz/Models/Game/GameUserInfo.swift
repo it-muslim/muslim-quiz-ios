@@ -17,6 +17,8 @@ struct GameUserInfo: Equatable {
     let identifier: String
     let initiator: Bool
     let score: Int
+    
+    var user: User?
 }
 
 // MARK: JSON Decoding

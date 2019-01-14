@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class AvatarView: UIView, NibLoadable {
     
@@ -30,9 +31,13 @@ class AvatarView: UIView, NibLoadable {
         self.setupViews()
     }
     
-    func configure(user: User) {
-        self.imageView.image = nil //TODO: Load from user.avatarUrl
-        self.statusView.isHidden = user.online == false
+    func configure(user: User?) {
+        if let avatarUrl = user?.avatarUrl,
+            let url = URL(string: avatarUrl) {
+            self.imageView?.sd_setImage(with: url,
+                                       completed: nil)
+        }
+        self.statusView.isHidden = user?.online == false
     }
     
     //MARK: Private

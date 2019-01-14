@@ -8,7 +8,6 @@
 
 import Foundation
 import Firebase
-import IGListKit
 
 protocol HomePresenterProtocol: PresenterProtocol {
     func startGameRequested()
@@ -25,9 +24,15 @@ class HomePresenter : Presenter, HomePresenterProtocol {
     private var databaseRef: DatabaseReference! = Database.database().reference() //TODO: Inject and wrap?
     private var gamesObserver: DatabaseHandle?
     
+    // Destructor
+    
     deinit {
-        self.databaseRef.removeAllObservers()
+        if let gamesObserver = self.gamesObserver {
+            self.databaseRef.removeObserver(withHandle: gamesObserver)
+        }
     }
+    
+    // MARK: Events
     
     override func viewDidLoad() {
         self.loadData()

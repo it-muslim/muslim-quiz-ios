@@ -94,6 +94,7 @@
 		FCCD877321E25AB80086C030 /* RoundStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCD877221E25AB80086C030 /* RoundStatus.swift */; };
 		FCCD877521E25AFC0086C030 /* RoundSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCD877421E25AFC0086C030 /* RoundSummary.swift */; };
 		FCCD877C21E271CE0086C030 /* DiffResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCD877B21E271CE0086C030 /* DiffResult.swift */; };
+		FCD201E821EBC673002DF7E8 /* DataSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD201E721EBC673002DF7E8 /* DataSnapshot.swift */; };
 		FCE1930A21CFF7BA00E0D663 /* DiffableBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE1930921CFF7BA00E0D663 /* DiffableBox.swift */; };
 		FCE1930D21CFF98D00E0D663 /* RoundUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE1930C21CFF98D00E0D663 /* RoundUserInfo.swift */; };
 		FCE1930F21CFF99500E0D663 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE1930E21CFF99500E0D663 /* Topic.swift */; };
@@ -215,6 +216,7 @@
 		FCCD877221E25AB80086C030 /* RoundStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundStatus.swift; sourceTree = "<group>"; };
 		FCCD877421E25AFC0086C030 /* RoundSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundSummary.swift; sourceTree = "<group>"; };
 		FCCD877B21E271CE0086C030 /* DiffResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffResult.swift; sourceTree = "<group>"; };
+		FCD201E721EBC673002DF7E8 /* DataSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSnapshot.swift; sourceTree = "<group>"; };
 		FCE1930921CFF7BA00E0D663 /* DiffableBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiffableBox.swift; sourceTree = "<group>"; };
 		FCE1930C21CFF98D00E0D663 /* RoundUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundUserInfo.swift; sourceTree = "<group>"; };
 		FCE1930E21CFF99500E0D663 /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
@@ -562,6 +564,7 @@
 				FCCD877B21E271CE0086C030 /* DiffResult.swift */,
 				FCAF935121BC9DB100E41CC1 /* NibLoadable.swift */,
 				FCAF939C21BD822A00E41CC1 /* UIImage.swift */,
+				FCD201E721EBC673002DF7E8 /* DataSnapshot.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -940,6 +943,7 @@
 				FC6D8A7321C5581A00987D14 /* RoundAssembly.swift in Sources */,
 				FC6D8A8621C55DD900987D14 /* RoundProgressCell.swift in Sources */,
 				FCE1931121CFF99A00E0D663 /* Question.swift in Sources */,
+				FCD201E821EBC673002DF7E8 /* DataSnapshot.swift in Sources */,
 				FCBAF8A521BC1E9F00A596E3 /* StartPresenter.swift in Sources */,
 				FCEE09BB21CE8FBC00C2FF64 /* RootPresenter.swift in Sources */,
 				FCAF934221BC8B1100E41CC1 /* UsersAssembly.swift in Sources */,

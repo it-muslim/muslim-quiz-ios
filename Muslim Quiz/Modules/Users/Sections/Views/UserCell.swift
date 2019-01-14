@@ -19,13 +19,11 @@ class UserCell : UICollectionViewCell {
     @IBOutlet var scoreLabel: UILabel!
     
     func configure(number: Int, user: User) {
-        
         self.numberLabel.text = "\(number)"
         self.nameLabel.text = user.fullName
         self.avatarView.configure(user: user)
         self.levelLabel.text = user.level
         self.scoreLabel.text = "\(user.score)"
-        
     }
     
 }

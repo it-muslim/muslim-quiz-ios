@@ -27,8 +27,8 @@ class GameViewController: ViewController {
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         self.setupViews()
+        super.viewDidLoad()
     }
     
     //MARK: Private
@@ -53,6 +53,7 @@ extension GameViewController: GameView {
     
     func configure(items: [ListDiffable]) {
         self.adapterDataSource.listObjects = items
+        self.adapter.performUpdates(animated: true, completion: nil)
     }
     
 }
