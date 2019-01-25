@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum DialogStatus {
+public enum DialogStatus {
     case draw
     case win
     case lose
@@ -16,7 +16,7 @@ enum DialogStatus {
     case giveUp
 }
 
-protocol DialogFactoryProtocol {
+public protocol DialogFactoryProtocol {
     func present(in viewController: UIViewController,
                  title: String,
                  msg: String,
@@ -24,9 +24,9 @@ protocol DialogFactoryProtocol {
     func present(in viewController: UIViewController, status: DialogStatus)
 }
 
-class DialogFactory: DialogFactoryProtocol {
+public class DialogFactory: DialogFactoryProtocol {
     
-    func present(in viewController: UIViewController,
+    public func present(in viewController: UIViewController,
                  title: String,
                  msg: String,
                  cancel: String? = nil) {
@@ -45,7 +45,7 @@ class DialogFactory: DialogFactoryProtocol {
                                completion: nil)
     }
     
-    func present(in viewController: UIViewController, status: DialogStatus) {
+    public func present(in viewController: UIViewController, status: DialogStatus) {
         func message(for status: DialogStatus) -> String {
             switch status {
             case .draw:

@@ -11,7 +11,7 @@ import UIKit
 public protocol NibLoadable {}
 public extension NibLoadable where Self: UIView {
     
-    func setupFromNib() {
+    public func setupFromNib() {
         guard let view = self.instantiateFromNib() else { return }
         view.frame = self.bounds
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -19,7 +19,7 @@ public extension NibLoadable where Self: UIView {
         
     }
     
-    func instantiateFromNib() -> UIView? {
+    public func instantiateFromNib() -> UIView? {
         return Bundle.main.loadNibNamed(String(describing: type(of: self)),
                                         owner: self,
                                         options: nil)?.first as? UIView
