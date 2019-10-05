@@ -20,6 +20,7 @@ protocol StartPresenterProtocol: PresenterProtocol {
 
 class StartPresenter : Presenter, StartPresenterProtocol {
     
+    var eventTracker: EventTrackerProtocol?
     var router: StartRouterProtocol!
     weak var view: StartView!
     
@@ -54,7 +55,7 @@ class StartPresenter : Presenter, StartPresenterProtocol {
     private func signUp(email: String, password: String) {
         self.view.startLoading()
         self.auth.createUser(withEmail: email,
-                               password: password)
+                             password: password)
         { [weak self] (auth, error) in
             self?.processAuth(email, password, auth, error)
         }
@@ -89,6 +90,8 @@ class StartPresenter : Presenter, StartPresenterProtocol {
             return
         }
         
+        eventTracker?.track(eventName: "success auth", properties: ["user": user.uid])
+        
         self.databaseRef.child("users/\(user.uid)").setValue([
             "email" : email,
             "level" : Config.initialLevel,
@@ -113,6 +116,7 @@ class StartPresenter : Presenter, StartPresenterProtocol {
         default:
             self.view.showError(msg: error.localizedDescription)
         }
+        eventTracker?.track(eventName: "failed auth", properties: ["error": error.code])
     }
     
 }

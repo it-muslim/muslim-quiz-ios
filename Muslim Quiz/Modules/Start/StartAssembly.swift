@@ -18,13 +18,15 @@ protocol StartAssemblyProtocol: class {
 
 class StartAssembly: StartAssemblyProtocol {
     
+    let serviceAssembly: ServiceAssemblyProtocol
     var homeAssembly: HomeAssembly!
     private let container: Container
     
     init(container: Container) {
         self.container = container
         self.homeAssembly = HomeAssembly(container: container)
-    
+        self.serviceAssembly = container.resolve(ServiceAssemblyProtocol.self)!
+        
         self.container.register(StartView.self) { r in
             let viewController = StartViewController()
             viewController.presenter = r.resolve(StartPresenterProtocol.self)!
@@ -36,6 +38,7 @@ class StartAssembly: StartAssemblyProtocol {
                 let presenter = presenter as! StartPresenter
                 presenter.view = r.resolve(StartView.self)!
                 presenter.router = r.resolve(StartRouterProtocol.self)!
+                presenter.eventTracker = self.serviceAssembly.getService()
         }
         self.container.register(StartRouterProtocol.self) { r in StartRouter() }
             .initCompleted { r, router in
@@ -49,7 +52,7 @@ class StartAssembly: StartAssemblyProtocol {
         let startModule = self.container.resolve(StartView.self)!.viewController!
         return UINavigationController(rootViewController:startModule)
     }
-
+    
     
 }
 

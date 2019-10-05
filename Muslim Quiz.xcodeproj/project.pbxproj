@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5CADF58D25A117D851CD6DC0 /* Pods_Muslim_QuizTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0872E5FA3B9CB6EA3DBC3118 /* Pods_Muslim_QuizTests.framework */; };
+		7C9338792348EA1600AFF566 /* EventTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9338782348EA1600AFF566 /* EventTracker.swift */; };
+		7C93387B2348EA5800AFF566 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C93387A2348EA5800AFF566 /* Event.swift */; };
 		FAD9B17DAF27087E9FC51DA0 /* Pods_Muslim_Quiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAACB619E7C9C8E0EAF417FD /* Pods_Muslim_Quiz.framework */; };
 		FC26EEE021C5A0F900D5B23F /* RoundHeaderSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC26EEDF21C5A0F900D5B23F /* RoundHeaderSectionController.swift */; };
 		FC26EEE421C5A12700D5B23F /* RoundHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC26EEE221C5A12700D5B23F /* RoundHeaderCell.swift */; };
@@ -122,6 +124,8 @@
 /* Begin PBXFileReference section */
 		0872E5FA3B9CB6EA3DBC3118 /* Pods_Muslim_QuizTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Muslim_QuizTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CE0979DACABE6CFF64D92FF /* Pods-Muslim Quiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muslim Quiz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Muslim Quiz/Pods-Muslim Quiz.debug.xcconfig"; sourceTree = "<group>"; };
+		7C9338782348EA1600AFF566 /* EventTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTracker.swift; sourceTree = "<group>"; };
+		7C93387A2348EA5800AFF566 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		BD18956E2BA0C90685648611 /* Pods-Muslim Quiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muslim Quiz.release.xcconfig"; path = "Pods/Target Support Files/Pods-Muslim Quiz/Pods-Muslim Quiz.release.xcconfig"; sourceTree = "<group>"; };
 		C6E5BADB54D86034F0C22689 /* Pods-Muslim QuizTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muslim QuizTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Muslim QuizTests/Pods-Muslim QuizTests.release.xcconfig"; sourceTree = "<group>"; };
 		DAACB619E7C9C8E0EAF417FD /* Pods_Muslim_Quiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Muslim_Quiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -334,6 +338,7 @@
 		FC3BE00321BC3CB3002ADF7F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7C93387A2348EA5800AFF566 /* Event.swift */,
 				FCE1931221CFF99F00E0D663 /* User.swift */,
 				FCE1930E21CFF99500E0D663 /* Topic.swift */,
 				FCE1931021CFF99A00E0D663 /* Question.swift */,
@@ -661,6 +666,7 @@
 		FCB8767C21BBD2FA00A8284D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				7C9338782348EA1600AFF566 /* EventTracker.swift */,
 				FCB8767D21BBD30B00A8284D /* ServiceAssembly.swift */,
 				FCB8768121BBDE5700A8284D /* ColorService.swift */,
 				FC3BE00121BC2BF5002ADF7F /* SectionSourceService.swift */,
@@ -878,7 +884,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Muslim Quiz/Pods-Muslim Quiz-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Muslim Quiz/Pods-Muslim Quiz-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/BugfenderSDK/BugfenderSDK.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
@@ -921,7 +927,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Muslim Quiz/Pods-Muslim Quiz-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Muslim Quiz/Pods-Muslim Quiz-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -943,6 +949,7 @@
 				FC6D8A7321C5581A00987D14 /* RoundAssembly.swift in Sources */,
 				FC6D8A8621C55DD900987D14 /* RoundProgressCell.swift in Sources */,
 				FCE1931121CFF99A00E0D663 /* Question.swift in Sources */,
+				7C93387B2348EA5800AFF566 /* Event.swift in Sources */,
 				FCD201E821EBC673002DF7E8 /* DataSnapshot.swift in Sources */,
 				FCBAF8A521BC1E9F00A596E3 /* StartPresenter.swift in Sources */,
 				FCEE09BB21CE8FBC00C2FF64 /* RootPresenter.swift in Sources */,
@@ -1002,6 +1009,7 @@
 				FC3BE00221BC2BF5002ADF7F /* SectionSourceService.swift in Sources */,
 				FCE1930A21CFF7BA00E0D663 /* DiffableBox.swift in Sources */,
 				FC865D3E21C634560041010A /* DialogView.swift in Sources */,
+				7C9338792348EA1600AFF566 /* EventTracker.swift in Sources */,
 				FC52A00C217CBCEA00886C76 /* AppConfigurator.swift in Sources */,
 				FCAF938321BD3EB900E41CC1 /* RoundSectionController.swift in Sources */,
 				FC6D8A7221C5581A00987D14 /* RoundViewController.swift in Sources */,

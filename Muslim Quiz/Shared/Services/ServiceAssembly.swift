@@ -20,12 +20,15 @@ class ServiceAssembly: ServiceAssemblyProtocol {
         
         self.container.register(ColorServiceProtocol.self) { r in
             return RandomColorService()
-        }.inObjectScope(.container)
+            }.inObjectScope(.container)
         self.container.register(SectionSourceServiceProtocol.self) { r in
             return SectionSourceService()
-        }.inObjectScope(.transient)
+            }.inObjectScope(.transient)
+        self.container.register(EventTrackerProtocol.self) { r in
+            return EventTracker()
+            }.inObjectScope(.container)
     }
-
+    
     func getService<T>() -> T? {
         return self.container.resolve(T.self)
     }
